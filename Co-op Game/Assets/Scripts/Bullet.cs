@@ -4,30 +4,32 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private PlayerHealth playerHealth;
+    public Rigidbody2D rigibod; 
 
-    private void Start()
+    public float bulletSpeed = 500f;
+    private float bulletLifetime = 2f;
+
+    private void Awake()
     {
-        //Calls Destroy function
-        StartCoroutine(Destroy());
-
-        playerHealth = new PlayerHealth();
+        rigibod = GetComponent<Rigidbody2D>();
     }
 
-    //Temporary Coroutine to destory bullets. 
-    IEnumerator Destroy()
+    // Projects & adds force to bullet. Destroys after period of time.
+    public void Project(Vector2 direction)
     {
-        yield return new WaitForSeconds(2f);
-        Destroy(gameObject);
+        Debug.Log(direction);
+
+        rigibod.AddForce(direction * this.bulletSpeed);
+
+        Destroy(this.gameObject, bulletLifetime);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    // If bullet hits something
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Enemy")
         {
-            playerHealth.Damage(1);
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }
     }
-
 }
