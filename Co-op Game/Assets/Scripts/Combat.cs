@@ -4,7 +4,8 @@ using UnityEngine;
 //Ensures that everytime this class is lauched, it calls the new Unity Input System
 using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour
+
+public class Combat : MonoBehaviour
 {
     //Declaring object. PlayerInputAction can be found in InputAction folder.
     private PlayerInputAction playerInputAction;
@@ -27,9 +28,8 @@ public class PlayerMovement : MonoBehaviour
         playerInputAction.Disable();
     }
 
-    private void Update()
+    private void Shoot()
     {
         
     }
-
 }
