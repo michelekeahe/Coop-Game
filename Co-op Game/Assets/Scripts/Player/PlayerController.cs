@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    public Rigidbody2D rigidbody;
+    public Rigidbody2D rb;
 
     public float speed = 3.0f;
     public float jumpForce = 6.0f;
@@ -16,18 +16,18 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        rigidbody = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void FixedUpdate()
     {
-        rigidbody.velocity = new Vector2(horizontal * speed, rigidbody.velocity.y);
+        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
     }
 
     // Jump method
     public void Jump(InputAction.CallbackContext context)
     {
-        if (isGrounded) rigidbody.velocity = new Vector2(rigidbody.velocity.x, jumpForce);
+        if (isGrounded) rb.velocity = new Vector2(rb.velocity.x, jumpForce);
     }
 
     // Movement Method

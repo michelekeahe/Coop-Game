@@ -43,6 +43,6 @@ public class Combat : MonoBehaviour
     private void Shoot()
     {
         Bullet bullet = Instantiate(this.bulletPrefab, firePoint.position, firePoint.rotation);
-        bullet.Project(this.transform.right);
+        bullet.Project(this.transform.up);
     }
 }
