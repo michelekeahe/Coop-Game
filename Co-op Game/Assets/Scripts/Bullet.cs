@@ -4,22 +4,24 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public Rigidbody2D rigibod; 
-
     [SerializeField]
     private float bulletSpeed = 50f;
     private float bulletLifetime = 2f;
 
+
     private void Awake()
     {
-        rigibod = GetComponent<Rigidbody2D>();
+
     }
 
-    // Projects & adds force to bullet. Destroys after period of time.
-    public void Project(Vector2 direction)
+    // Spawns bullet. Gives it a rigid body, then launches it from firePoint.
+    public void Shoot(Transform firePoint)
     {
-        rigibod.AddForce(direction * this.bulletSpeed, ForceMode2D.Impulse);
-        Destroy(this.gameObject, bulletLifetime);
+        GameObject spawnedBullet = Instantiate(this.gameObject, firePoint.position, firePoint.rotation);
+        Rigidbody2D rb = spawnedBullet.GetComponent<Rigidbody2D>();
+        rb.AddForce(firePoint.up * this.bulletSpeed, ForceMode2D.Impulse);
+        Destroy(spawnedBullet, this.bulletLifetime);
+
     }
 
     // If bullet hits something

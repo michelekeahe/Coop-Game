@@ -49,10 +49,12 @@ public class PlayerController : MonoBehaviour
         if (collision.tag == "Ground") isGrounded = true;
     }
 
+    
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Ground") isGrounded = false;
     }
+    
 
     private void Flip()
     {

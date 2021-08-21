@@ -35,14 +35,8 @@ public class Combat : MonoBehaviour
 
     private void Start()
     {
-        // When player clicks Shoot input, then call Shoot function.
-        playerInputAction.Land.Shoot.performed += _ => Shoot();   
+        // When player clicks Shoot input, then call Shoot function in Bullet class.
+        playerInputAction.Land.Shoot.performed += _ => bulletPrefab.Shoot(firePoint);   
     }
 
-    // Summons and launches bullet PreFab.
-    private void Shoot()
-    {
-        Bullet bullet = Instantiate(this.bulletPrefab, firePoint.position, firePoint.rotation);
-        bullet.Project(this.transform.up);
-    }
 }
