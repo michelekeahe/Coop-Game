@@ -10,7 +10,7 @@ public class EnemyHealth : MonoBehaviour
     //If bullet touches enemy, enemies health goes down by 1.
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Bullet")
+        if (collision.gameObject.tag == "PlayerBullet")
         {
             Debug.Log("Touchdown!");
             maxHealth = maxHealth - 1;

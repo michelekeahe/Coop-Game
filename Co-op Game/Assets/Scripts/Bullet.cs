@@ -9,11 +9,6 @@ public class Bullet : MonoBehaviour
     private float bulletLifetime = 2f;
 
 
-    private void Awake()
-    {
-
-    }
-
     // Spawns bullet. Gives it a rigid body, then launches it from firePoint.
     public void Shoot(Transform firePoint)
     {
@@ -27,7 +22,7 @@ public class Bullet : MonoBehaviour
     // If bullet hits enemy, destory bullet
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "MeleEnemy")
+        if (collision.gameObject.tag == "Enemy")
         {
             Destroy(this.gameObject);
         }
