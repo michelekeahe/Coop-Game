@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
+    //grabbing player position in Unity
     [SerializeField]
     private Transform playerPos;
 
     [SerializeField]
     private int speed;
+    [SerializeField]
+    private int agroRange;
 
+    
     private bool isGrounded;
 
     private void FixedUpdate()
@@ -17,6 +21,9 @@ public class EnemyMovement : MonoBehaviour
         FollowPlayer();
     }
 
+    //Enemy follows player if enemy is grounded
+    //and if player is within x units
+    //Enemy stops following player if player is within 1.5 units.
     private void FollowPlayer()
     {
         Vector3 distanceFromPlayer = playerPos.position - transform.position;
@@ -24,7 +31,7 @@ public class EnemyMovement : MonoBehaviour
 
         float distanceToPlayer = distanceFromPlayer.magnitude;
 
-        if (isGrounded == true && distanceToPlayer > 1.5f)
+        if (isGrounded == true && distanceToPlayer > 1.5f && distanceToPlayer < agroRange)
         {
             transform.position += new Vector3(direction.x, 0f, 0f) * speed * Time.deltaTime;
         }
