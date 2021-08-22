@@ -316,6 +316,9 @@ GameObject:
   m_Component:
   - component: {fileID: 354554480}
   - component: {fileID: 354554481}
+cinemachine
+
+main
   - component: {fileID: 354554483}
   - component: {fileID: 354554484}
   - component: {fileID: 354554485}
@@ -559,6 +562,19 @@ MonoBehaviour:
   speed: 10
   jumpForce: 6
   isGrounded: 0
+--- !u!114 &354554488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354554479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b779e2e999b73ba46a4eadd4a14b03dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
