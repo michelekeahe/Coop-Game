@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    private int health = 3;
+    
+    public int health = 3;
 
     public void Healing (int healAmount)
     {
