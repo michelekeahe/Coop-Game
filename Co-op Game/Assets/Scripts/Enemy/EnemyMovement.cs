@@ -49,11 +49,10 @@ public class EnemyMovement : MonoBehaviour
         }
         else if (isGrounded == true && distanceToPlayer <= stopDistance)
         {
-            bulletPrefab.Shoot(firePoint);
+            bulletPrefab.StartShooting(firePoint);
         }
 
     }
-
 
 
     private void OnTriggerEnter2D(Collider2D collision)
