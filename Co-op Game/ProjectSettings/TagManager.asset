@@ -6,7 +6,9 @@ TagManager:
   tags:
   - Bullet
   - Ground
-  - MeleEnemy
+  - Enemy
+  - PlayerBullet
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX
@@ -16,9 +18,9 @@ TagManager:
   - UI
   - Ground
   - IgnoreCollisions
-  - 
-  - 
-  - 
+  - AgroRange
+  - Bullet
+  - Enemy
   - 
   - 
   - 

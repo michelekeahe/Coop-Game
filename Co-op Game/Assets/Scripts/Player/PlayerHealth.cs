@@ -14,7 +14,7 @@ public class PlayerHealth : MonoBehaviour
     //Immunity is lost after x seconds
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "MeleEnemy")
+        if (collision.gameObject.tag == "Enemy")
         {
             this.gameObject.layer = LayerMask.NameToLayer("IgnoreCollisions");
             health = health- 1;

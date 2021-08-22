@@ -11,19 +11,31 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField]
     private int speed;
     [SerializeField]
-    private int agroRange;
+    private float stopDistance;
 
-    
+
+    public EnemyBullet bulletPrefab;
+
+    [SerializeField]
+    private Transform firePoint;
+
+
+
     private bool isGrounded;
 
-    private void FixedUpdate()
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        FollowPlayer();
+        if (collision.tag == "Player")
+        {
+            FollowPlayer();
+        }
     }
+
+
 
     //Enemy follows player if enemy is grounded
     //and if player is within x units
-    //Enemy stops following player if player is within 1.5 units.
+    //Enemy stops following player if player is within StopDistance.
     private void FollowPlayer()
     {
         Vector3 distanceFromPlayer = playerPos.position - transform.position;
@@ -31,12 +43,18 @@ public class EnemyMovement : MonoBehaviour
 
         float distanceToPlayer = distanceFromPlayer.magnitude;
 
-        if (isGrounded == true && distanceToPlayer > 1.5f && distanceToPlayer < agroRange)
+        if (isGrounded == true && distanceToPlayer > stopDistance)
         {
             transform.position += new Vector3(direction.x, 0f, 0f) * speed * Time.deltaTime;
         }
+        else if (isGrounded == true && distanceToPlayer <= stopDistance)
+        {
+            bulletPrefab.Shoot(firePoint);
+        }
 
     }
+
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
