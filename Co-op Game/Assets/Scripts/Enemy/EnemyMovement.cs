@@ -14,12 +14,6 @@ public class EnemyMovement : MonoBehaviour
     private float stopDistance;
 
 
-    public EnemyBullet bulletPrefab;
-
-    [SerializeField]
-    private Transform firePoint;
-
-
 
     private bool isGrounded;
 
@@ -46,10 +40,6 @@ public class EnemyMovement : MonoBehaviour
         if (isGrounded == true && distanceToPlayer > stopDistance)
         {
             transform.position += new Vector3(direction.x, 0f, 0f) * speed * Time.deltaTime;
-        }
-        else if (isGrounded == true && distanceToPlayer <= stopDistance)
-        {
-            bulletPrefab.StartShooting(firePoint);
         }
 
     }
