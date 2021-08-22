@@ -24,10 +24,10 @@ public class Bullet : MonoBehaviour
 
     }
 
-    // If bullet hits something
+    // If bullet hits enemy, destory bullet
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "MeleEnemy")
         {
             Destroy(this.gameObject);
         }

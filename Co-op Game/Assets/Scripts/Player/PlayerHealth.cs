@@ -5,15 +5,24 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     private int health = 3;
+    EnemyMeleCombat meleAttackDelay;
 
-    public void Healing (int healAmount)
+    private void Start()
     {
-        health = health + healAmount;
+        meleAttackDelay = new EnemyMeleCombat();
     }
 
-    public void Damage(int damageAmount)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        health = health - damageAmount;
+        if (collision.gameObject.tag == "MeleEnemy")
+        {
+            health = health- 1;
+            Debug.Log(health);
+        }
+
     }
+    
+
 
 }
