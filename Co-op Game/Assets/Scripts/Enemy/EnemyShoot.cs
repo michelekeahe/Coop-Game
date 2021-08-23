@@ -26,19 +26,16 @@ public class EnemyShoot : MonoBehaviour
         while (collision.tag == "Player" && isInRage)
         {
             //StartCoroutine(ShootDelay());
+            Debug.Log("Shoot");
         }
 
-        Debug.Log(isInRage);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
-        {
-            isInRage = false;
-        }
-
+        isInRage = false;
     }
+    
 
     IEnumerator ShootDelay()
     {
