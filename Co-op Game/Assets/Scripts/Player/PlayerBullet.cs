@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class PlayerBullet : MonoBehaviour
 {
     [SerializeField]
     private float bulletSpeed = 50f;
@@ -22,7 +22,7 @@ public class Bullet : MonoBehaviour
     // If bullet hits enemy, destory bullet
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if ((collision.gameObject.tag == "Enemy") || collision.gameObject.tag == "Ground")
         {
             Destroy(this.gameObject);
         }
