@@ -23,7 +23,6 @@ public class PlayerCombat : MonoBehaviour
     {
         // Instantiates object.
         controls = new PlayerInputAction();
-
     }
 
     private void Start()
@@ -40,20 +39,12 @@ public class PlayerCombat : MonoBehaviour
         Vector3 mouseWorldPosition = mainCam.ScreenToWorldPoint(mouseScreenPosition);
         Vector3 targetDirection = mouseWorldPosition - transform.position;
         angle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
-
-        Debug.Log(angle);
+        
         // Limit arm angle for shooting
         if ((angle <= maxAngle) && (angle >= minAngle))
         {
             transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
         }
-    }
-
-    private void PlayerShoot()
-    {
-        Vector2 mousePosition = controls.Land.MousePosition.ReadValue<Vector2>();
-        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-        bulletPrefab.Shoot(firePoint);
     }
 
     // No clue what this does.
