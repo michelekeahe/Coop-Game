@@ -5,31 +5,24 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     private int health = 3;
+    private float invinsibilityTime = 3.0f;
 
-    private void Start()
-    {
-    }
-
-    //When player runs into enemy, player becomes immune to all colliders and loses 1 health.
-    //Immunity is lost after x seconds
+    // When player runs into enemy, player becomes invincible for a period of time and loses 1 health.
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            this.gameObject.layer = LayerMask.NameToLayer("IgnoreCollisions");
-            health = health- 1;
-            Invoke(nameof(TurnOnCollisions), 3f);
+            this.gameObject.layer = LayerMask.NameToLayer("Invinicibility");
+            health -= 1;
+
+            // Returns to regular collision layer after 3 seconds.
+            Invoke(nameof(TurnOnCollisions), invinsibilityTime);
             Debug.Log(health);
         }
-
-
     }
 
     private void TurnOnCollisions()
     {
         this.gameObject.layer = LayerMask.NameToLayer("Player");
     }
-    
-
-
 }
