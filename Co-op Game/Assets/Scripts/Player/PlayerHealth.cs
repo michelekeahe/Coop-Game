@@ -10,7 +10,7 @@ public class PlayerHealth : MonoBehaviour
     // When player runs into enemy, player becomes invincible for a period of time and loses 1 health.
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "EnemyBullet")
         {
             this.gameObject.layer = LayerMask.NameToLayer("Invinicibility");
             health -= 1;

@@ -11,13 +11,13 @@ public class EnemyBullet : MonoBehaviour
     // Shoot function
     public void Shoot(Transform firePoint)
     {
-            // Create Bullet
-            GameObject spawnedBullet = Instantiate(this.gameObject, firePoint.position, firePoint.rotation);
-            Rigidbody2D rb = spawnedBullet.GetComponent<Rigidbody2D>();
+        // Create Bullet
+        GameObject spawnedBullet = Instantiate(this.gameObject, firePoint.position, firePoint.rotation);
+        Rigidbody2D rb = spawnedBullet.GetComponent<Rigidbody2D>();
 
-            // Project Bullet
-            rb.AddForce(firePoint.up * this.bulletSpeed, ForceMode2D.Impulse);
-            Destroy(spawnedBullet, this.bulletLifetime);
+        // Project Bullet
+        rb.AddForce(firePoint.up * this.bulletSpeed, ForceMode2D.Impulse);
+        Destroy(spawnedBullet, this.bulletLifetime);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
