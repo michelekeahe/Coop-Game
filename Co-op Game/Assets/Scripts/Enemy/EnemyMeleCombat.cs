@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class EnemyMeleCombat : MonoBehaviour
 {
-
-
     private void Update()
     {
 
     }
-
-    
-
-
-
 }
