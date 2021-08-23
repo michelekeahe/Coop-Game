@@ -15,20 +15,40 @@ public class EnemyShoot : MonoBehaviour
     private float maxShootTime = 2.5f;
     private float randShootTime = 0f;
 
+    private bool isInRage = true;
+
+    
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        StartCoroutine(ShootDelay());
+        isInRage = true;
+
+        while (collision.tag == "Player" && isInRage)
+        {
+            //StartCoroutine(ShootDelay());
+        }
+
+        Debug.Log(isInRage);
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            isInRage = false;
+        }
+
     }
 
     IEnumerator ShootDelay()
     {
         Debug.Log("Shoot");
+        // Wait after random period of time
+        randShootTime = Random.Range(minShootTime, maxShootTime);
+        yield return new WaitForSeconds(2);
 
         // Shoot
         this.bulletPrefab.Shoot(firepoint);
 
-        // Wait after random period of time
-        randShootTime = Random.Range(minShootTime, maxShootTime);
-        yield return new WaitForSeconds(2);
     }
 }
