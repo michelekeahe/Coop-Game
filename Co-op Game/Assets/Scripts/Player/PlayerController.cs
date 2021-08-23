@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb;
+    public BoxCollider2D groundCheck;
 
     public float speed = 3.0f;
     public float jumpForce = 6.0f;
