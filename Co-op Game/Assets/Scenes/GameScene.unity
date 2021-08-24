@@ -1130,6 +1130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: -891676035970118650, guid: 2feffe1514a54ea4ea734179913a8dbb, type: 3}
   firepoint: {fileID: 213779486}
+  playerPos: {fileID: 354554480}
   minShootTime: 1.5
   maxShootTime: 2.5
 --- !u!58 &626264485
@@ -1849,6 +1850,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 5274685381392341597, guid: 58b6897a12ef51148b72896457270ac1, type: 3}
   firePoint: {fileID: 1946488455}
+  aimSpeed: 5
 --- !u!1 &1540530102
 GameObject:
   m_ObjectHideFlags: 3

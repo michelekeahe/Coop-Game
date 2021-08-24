@@ -11,6 +11,9 @@ public class EnemyShoot : MonoBehaviour
     [SerializeField]
     private Transform firepoint;
 
+    [SerializeField]
+    private Transform playerPos;
+
     // Variables used to decide of often enemy shoots
     [SerializeField]
     private float minShootTime = .5f;
@@ -29,8 +32,10 @@ public class EnemyShoot : MonoBehaviour
         if (collision.tag == "Player" && isInRage == true)
         {
             StartCoroutine(ShootDelay());
+
+
         }
-        
+
 
     }
 
@@ -54,6 +59,21 @@ public class EnemyShoot : MonoBehaviour
         // This is because all of the players colliders disable when dead.
         while (isInRage)
         {
+            float playerDirection = playerPos.position.x - transform.position.x;
+            float playerDirSimple = Mathf.Sign(playerDirection);
+            
+            if(playerDirSimple == 1)
+            {
+                transform.right = ((Vector2)playerPos.position - (Vector2)transform.position).normalized;
+
+            }
+            else
+            {
+                transform.right = -((Vector2)playerPos.position - (Vector2)transform.position).normalized;
+
+            }
+
+
             // Wait after random period of time
             randShootTime = Random.Range(minShootTime, maxShootTime);
             yield return new WaitForSeconds(.5f);

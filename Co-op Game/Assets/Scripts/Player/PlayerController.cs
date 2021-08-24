@@ -12,8 +12,8 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 6.0f;
     public bool isGrounded = false;
 
-    private bool isFacingRight = true;
     private float horizontal = 0.0f;
+    private bool isFacingRight = true;
 
     private void Start()
     {
@@ -61,5 +61,7 @@ public class PlayerController : MonoBehaviour
         localScale.x *= -1;
         transform.localScale = localScale;
         isFacingRight = !isFacingRight;
+
     }
+
 }
