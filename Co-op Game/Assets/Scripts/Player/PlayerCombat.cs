@@ -44,6 +44,7 @@ public class PlayerCombat : MonoBehaviour
 
     private void FollowMouse()
     {
+        /*
         Vector2 mouseScreenPosition = controls.Land.MousePosition.ReadValue<Vector2>();
         Vector3 mouseWorldPosition = mainCam.ScreenToWorldPoint(mouseScreenPosition);
         Vector3 targetDirection = mouseWorldPosition - transform.position;
@@ -57,10 +58,14 @@ public class PlayerCombat : MonoBehaviour
         //{
             transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, tz));
 
-            
-        //}
-      
 
+        //}
+        */
+
+        Vector2 mousPos = Camera.main.ScreenToWorldPoint(controls.Land.MousePosition.ReadValue<Vector2>());
+        transform.right = (mousPos - (Vector2)transform.position).normalized;
+
+        
 
     }
 
