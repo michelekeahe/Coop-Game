@@ -43,10 +43,9 @@ public class PlayerCombat : MonoBehaviour
         FollowMouse();
     }
 
-    //Rotates gun in direction of mouse
+    // Rotates gun in direction of mouse
     private void FollowMouse()
     {
-        
         Vector2 mouseScreenPosition = controls.Land.MousePosition.ReadValue<Vector2>();
         Vector3 mouseWorldPosition = mainCam.ScreenToWorldPoint(mouseScreenPosition);
         Vector3 targetDirection = mouseWorldPosition - transform.position;
