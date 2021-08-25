@@ -9,8 +9,6 @@ public class PlayerCombat : MonoBehaviour
     #region Declaring script
     // Declaring object. PlayerInputAction can be found in InputAction folder.
     private PlayerInputAction controls;
-    private PlayerController controller = new PlayerController();
-
     #endregion
 
     #region Declaring component

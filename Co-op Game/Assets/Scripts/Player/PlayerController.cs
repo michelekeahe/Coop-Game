@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     #region Decalring components
     [SerializeField]
     private Rigidbody2D rb;
+    [SerializeField]
+    private BoxCollider2D interactionTrigger;
     #endregion
 
     #region Serialzied variables
@@ -16,10 +18,11 @@ public class PlayerController : MonoBehaviour
     #endregion
 
     #region Private variables
-    private float horizontal = 0.0f;
     private bool isFacingRight = true;
     private Vector2 dir;
     #endregion
+
+    public bool interacting = false;
 
     private void Start()
     {
@@ -51,6 +54,20 @@ public class PlayerController : MonoBehaviour
         transform.localScale = localScale;
         isFacingRight = !isFacingRight;
 
+    }
+
+
+    public void Interact(InputAction.CallbackContext context)
+    {
+
+        if (context.started || context.performed)
+        {
+            interactionTrigger.enabled = true;
+        }
+        else
+        {
+            interactionTrigger.enabled = false;
+        }
     }
 
 }

@@ -9,6 +9,8 @@ TagManager:
   - Enemy
   - PlayerBullet
   - EnemyBullet
+  - Door
+  - InteractionCheck
   layers:
   - Default
   - TransparentFX
@@ -21,9 +23,9 @@ TagManager:
   - AgroRange
   - Bullet
   - Enemy
-  - Door
-  - 
-  - 
+  - InteractionCheck
+  - DoorClosed
+  - DoorOpened
   - 
   - 
   - 
