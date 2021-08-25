@@ -6,21 +6,25 @@ using UnityEngine.InputSystem;
 
 public class PlayerCombat : MonoBehaviour
 {
-    public PlayerBullet bulletPrefab;
-
+    #region Declaring script
     // Declaring object. PlayerInputAction can be found in InputAction folder.
     private PlayerInputAction controls;
     private PlayerController controller = new PlayerController();
-    
+
+    #endregion
+
+    #region Declaring component
+    [SerializeField]
+    private PlayerBullet bulletPrefab;
     [SerializeField]
     private Transform firePoint;
-    
     private Camera mainCam;
+    #endregion
+
+    #region Private Variables
     private float angle = 0f;
-    private float maxAngle = 45f;
-    private float minAngle = -45f;
     public float aimSpeed = 0;
-    
+    #endregion
 
     private void Awake()
     {
@@ -39,34 +43,18 @@ public class PlayerCombat : MonoBehaviour
     private void FixedUpdate()
     {
         FollowMouse();
-        
     }
 
+    //Rotates gun in direction of mouse
     private void FollowMouse()
     {
-        /*
+        
         Vector2 mouseScreenPosition = controls.Land.MousePosition.ReadValue<Vector2>();
         Vector3 mouseWorldPosition = mainCam.ScreenToWorldPoint(mouseScreenPosition);
         Vector3 targetDirection = mouseWorldPosition - transform.position;
         angle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
-
-
-        float tz = mouseWorldPosition.y * aimSpeed;
-
-        // Limit arm angle for shooting
-        //if ((angle <= maxAngle) && (angle >= minAngle))
-        //{
-            transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, tz));
-
-
-        //}
-        */
-
-        Vector2 mousPos = Camera.main.ScreenToWorldPoint(controls.Land.MousePosition.ReadValue<Vector2>());
-        transform.right = (mousPos - (Vector2)transform.position).normalized;
-
         
-
+        transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
     }
 
     // No clue what this does.

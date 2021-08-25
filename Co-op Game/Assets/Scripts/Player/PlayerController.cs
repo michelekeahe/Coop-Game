@@ -5,15 +5,21 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    public Rigidbody2D rb;
-    public BoxCollider2D groundCheck;
+    #region Decalring components
+    [SerializeField]
+    private Rigidbody2D rb;
+    #endregion
 
-    public float speed = 3.0f;
-    public float jumpForce = 6.0f;
-    public bool isGrounded = false;
+    #region Serialzied variables
+    [SerializeField]
+    private float speed = 3.0f;
+    #endregion
 
+    #region Private variables
     private float horizontal = 0.0f;
     private bool isFacingRight = true;
+    private Vector2 dir;
+    #endregion
 
     private void Start()
     {
@@ -22,13 +28,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-    }
-
-    // Jump method
-    public void Jump(InputAction.CallbackContext context)
-    {
-        if (isGrounded) rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        rb.AddForce(dir * speed * Time.deltaTime, ForceMode2D.Impulse);
     }
 
     // Movement Method
@@ -40,21 +40,10 @@ public class PlayerController : MonoBehaviour
     // Velocity method for movement
     public void SetVelocity(Vector2 direction)
     {
-        horizontal = direction.x;
-        if (horizontal < 0 && isFacingRight) Flip();
-        else if (horizontal > 0 && !isFacingRight) Flip();
+        dir = direction;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Ground") isGrounded = true;
-    }
-    
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.tag == "Ground") isGrounded = false;
-    }
-
+    //Flip method
     private void Flip()
     {
         Vector3 localScale = transform.localScale;
