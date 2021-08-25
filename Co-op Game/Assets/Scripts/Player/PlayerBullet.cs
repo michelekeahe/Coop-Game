@@ -23,7 +23,7 @@ public class PlayerBullet : MonoBehaviour
     // If bullet hits enemy, destory bullet
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if ((collision.gameObject.tag == "Enemy") || collision.gameObject.tag == "Ground")
+        if ((collision.gameObject.tag == "Enemy") || collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Door")
         {
             Destroy(this.gameObject);
         }

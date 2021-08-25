@@ -9,6 +9,8 @@ TagManager:
   - Enemy
   - PlayerBullet
   - EnemyBullet
+  - Door
+  - InteractionCheck
   layers:
   - Default
   - TransparentFX
@@ -21,9 +23,9 @@ TagManager:
   - AgroRange
   - Bullet
   - Enemy
-  - Obstacle
-  - GroundCheck
-  - 
+  - InteractionCheck
+  - DoorClosed
+  - DoorOpened
   - 
   - 
   - 
@@ -45,6 +47,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 4003405845
     locked: 0
   - name: Player
     uniqueID: 2202940615
