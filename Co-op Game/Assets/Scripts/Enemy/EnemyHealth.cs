@@ -15,10 +15,10 @@ public class EnemyHealth : MonoBehaviour
         if (collision.gameObject.tag == "PlayerBullet")
         {
             // Reduce health by 1 point
-            maxHealth -= bulletDamage;
+            this.maxHealth -= bulletDamage;
 
             // If enemy's health reduced to 0 or below, destroy GameObject (enemy death).
-            if (maxHealth <= 0)
+            if (this.maxHealth <= 0)
             {
                 Destroy(this.gameObject);
             }

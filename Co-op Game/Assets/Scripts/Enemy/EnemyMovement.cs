@@ -4,22 +4,24 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
+    #region Serialized Variables 
     //grabbing player position in Unity
     [SerializeField]
     private Transform playerPos;
-
     [SerializeField]
     private float speed = 0f;
     [SerializeField]
     private float stopDistance = 0f;
-    private float horizontalDirection = 0f;
-    
-    private bool isGrounded = false;
-    private bool isFacingRight = true;
-    
-    // For gizmo
-    Vector2 viewArea;
+    #endregion
 
+    #region Private Variables
+    private float horizontalDirection = 0f;
+    private bool isFacingRight = true;
+    // For gizmo
+    private Vector2 viewArea;
+    #endregion
+
+    //When Player is in range, follow him
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.tag == "Player")
@@ -32,39 +34,29 @@ public class EnemyMovement : MonoBehaviour
     // Enemy stops following player if player is within StopDistance.
     private void FollowPlayer()
     {
-        // Getting distance from player
+        // Getting distance from and to player. 
         Vector3 distanceFromPlayer = playerPos.position - transform.position;
         Vector3 direction = distanceFromPlayer.normalized;
-        
         float distanceToPlayer = distanceFromPlayer.magnitude;
 
         // Flips GameObject depending on direction it's moving towards
         SetVelocity(direction);
         
         // Checks distance from player and when to stop.
-        if (isGrounded && (distanceToPlayer > stopDistance))
+        if (distanceToPlayer > stopDistance)
         {
-            transform.position += new Vector3(direction.x, 0f, 0f) * speed * Time.deltaTime;
+            transform.position += new Vector3(direction.x, direction.y, 0) * speed * Time.deltaTime;
         }
     }
     
-    // Checks for grounding
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Ground") isGrounded = true;
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.tag == "Ground") isGrounded = false;
-    }
-
+    //Lets us see gizmo
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.cyan;
         Gizmos.DrawWireSphere(transform.position, stopDistance);
     }
 
+    //Code to flip enemy
     public void SetVelocity(Vector2 direction)
     {
         horizontalDirection = direction.x;

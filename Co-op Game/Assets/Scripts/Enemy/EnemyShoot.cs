@@ -4,25 +4,28 @@ using UnityEngine;
 
 public class EnemyShoot : MonoBehaviour
 {
-    // Refering to EnemyBullet class
-    public EnemyBullet bulletPrefab;
-
-    // Insantiated in Unity
+    #region Declaring Compenents
+    [SerializeField]
+    private EnemyBullet bulletPrefab;
     [SerializeField]
     private Transform firepoint;
-
     [SerializeField]
     private Transform playerPos;
+    #endregion
 
+    #region Serialized variables
     // Variables used to decide of often enemy shoots
     [SerializeField]
     private float minShootTime = .5f;
     [SerializeField]
     private float maxShootTime = 1f;
-    private float randShootTime = 0f;
+    #endregion
 
+    #region Private variables
+    private float randShootTime = 0f;
     // Bool to check is player is in range to shoot at.
     private bool isInRage = false;
+    #endregion
 
     // If the player is shoot range, then start the delay corutine.
     private void OnTriggerEnter2D(Collider2D collision)
@@ -32,11 +35,7 @@ public class EnemyShoot : MonoBehaviour
         if (collision.tag == "Player" && isInRage == true)
         {
             StartCoroutine(ShootDelay());
-
-
         }
-
-
     }
 
     // If player leaves range, change isInRange to false.
@@ -45,9 +44,7 @@ public class EnemyShoot : MonoBehaviour
         if (collision.tag == "Player")
         {
             isInRage = false;
-
         }
-
     }
 
 
@@ -59,20 +56,20 @@ public class EnemyShoot : MonoBehaviour
         // This is because all of the players colliders disable when dead.
         while (isInRage)
         {
-            float playerDirection = playerPos.position.x - transform.position.x;
-            float playerDirSimple = Mathf.Sign(playerDirection);
-            
-            if(playerDirSimple == 1)
-            {
-                transform.right = ((Vector2)playerPos.position - (Vector2)transform.position).normalized;
+            //Rotates gun to face player
+            Vector2 playerDirection = playerPos.position - transform.position;
+            float playerDirSimple = Mathf.Sign(playerDirection.x);
+            float angle = Mathf.Atan2(playerDirection.y, playerDirection.x) * Mathf.Rad2Deg + 180f;
 
+            if (playerDirSimple == 1)
+            {
+                //Must add 180 to angle, otherwise bullet shoots in opposite direction when facing right.
+                transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle + 180f));
             }
             else
             {
-                transform.right = -((Vector2)playerPos.position - (Vector2)transform.position).normalized;
-
+                transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle ));
             }
-
 
             // Wait after random period of time
             randShootTime = Random.Range(minShootTime, maxShootTime);
@@ -80,8 +77,6 @@ public class EnemyShoot : MonoBehaviour
 
             // Shoot
             this.bulletPrefab.Shoot(firepoint);
-
         }
-
     }
 }

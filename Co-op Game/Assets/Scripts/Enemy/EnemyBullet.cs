@@ -20,6 +20,7 @@ public class EnemyBullet : MonoBehaviour
         Destroy(spawnedBullet, this.bulletLifetime);
     }
 
+    //Destroys bullet
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if ((collision.gameObject.tag == "Player") || (collision.gameObject.tag == "Ground"))
