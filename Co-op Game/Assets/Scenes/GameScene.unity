@@ -677,7 +677,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 354554487}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: Movement
+        m_MethodName: ReadInput
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -733,7 +733,6 @@ MonoBehaviour:
   rb: {fileID: 354554485}
   interactionTrigger: {fileID: 394342956}
   speed: 30
-  interacting: 0
 --- !u!114 &354554488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1048,7 +1047,7 @@ GameObject:
   - component: {fileID: 545697508}
   - component: {fileID: 545697507}
   - component: {fileID: 545697506}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Door
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -1081,6 +1080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47b96dd9f814ea7459c98696b6812442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  door: {fileID: 545697507}
   doorOpenTime: 3
 --- !u!61 &545697507
 BoxCollider2D:
@@ -1202,7 +1202,7 @@ GameObject:
   - component: {fileID: 676694328}
   - component: {fileID: 676694327}
   - component: {fileID: 676694329}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Door
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -1313,6 +1313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47b96dd9f814ea7459c98696b6812442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  door: {fileID: 676694327}
   doorOpenTime: 3
 --- !u!1 &844186214
 GameObject:
@@ -1926,14 +1927,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3860916617528585871, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3860916617528585871, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 184203933
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
 --- !u!1001 &5067696662551195085
@@ -2047,14 +2040,6 @@ PrefabInstance:
     - target: {fileID: 6704331756686872303, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6704331756686872304, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6704331756686872304, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 184203933
       objectReference: {fileID: 0}
     - target: {fileID: 6704331756686872305, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: m_Name
