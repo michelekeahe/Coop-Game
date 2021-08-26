@@ -19,14 +19,6 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
             ""id"": ""7f8172b6-7d26-4070-9955-973ab1b10297"",
             ""actions"": [
                 {
-                    ""name"": ""Jump"",
-                    ""type"": ""Button"",
-                    ""id"": ""9a1a813f-0d6a-4e47-8959-7385e00a17d2"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
                     ""name"": ""Movement"",
                     ""type"": ""Button"",
                     ""id"": ""c3db0bb2-229a-4c83-9251-1f716ba3d205"",
@@ -68,17 +60,6 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Shoot"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""9e4d5b33-1a8f-4fae-ab4f-9392a76ff617"",
-                    ""path"": ""<Keyboard>/space"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -166,7 +147,6 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
 }");
         // Land
         m_Land = asset.FindActionMap("Land", throwIfNotFound: true);
-        m_Land_Jump = m_Land.FindAction("Jump", throwIfNotFound: true);
         m_Land_Movement = m_Land.FindAction("Movement", throwIfNotFound: true);
         m_Land_MousePosition = m_Land.FindAction("MousePosition", throwIfNotFound: true);
         m_Land_Shoot = m_Land.FindAction("Shoot", throwIfNotFound: true);
@@ -220,7 +200,6 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
     // Land
     private readonly InputActionMap m_Land;
     private ILandActions m_LandActionsCallbackInterface;
-    private readonly InputAction m_Land_Jump;
     private readonly InputAction m_Land_Movement;
     private readonly InputAction m_Land_MousePosition;
     private readonly InputAction m_Land_Shoot;
@@ -229,7 +208,6 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
     {
         private @PlayerInputAction m_Wrapper;
         public LandActions(@PlayerInputAction wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Jump => m_Wrapper.m_Land_Jump;
         public InputAction @Movement => m_Wrapper.m_Land_Movement;
         public InputAction @MousePosition => m_Wrapper.m_Land_MousePosition;
         public InputAction @Shoot => m_Wrapper.m_Land_Shoot;
@@ -243,9 +221,6 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
         {
             if (m_Wrapper.m_LandActionsCallbackInterface != null)
             {
-                @Jump.started -= m_Wrapper.m_LandActionsCallbackInterface.OnJump;
-                @Jump.performed -= m_Wrapper.m_LandActionsCallbackInterface.OnJump;
-                @Jump.canceled -= m_Wrapper.m_LandActionsCallbackInterface.OnJump;
                 @Movement.started -= m_Wrapper.m_LandActionsCallbackInterface.OnMovement;
                 @Movement.performed -= m_Wrapper.m_LandActionsCallbackInterface.OnMovement;
                 @Movement.canceled -= m_Wrapper.m_LandActionsCallbackInterface.OnMovement;
@@ -262,9 +237,6 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
             m_Wrapper.m_LandActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Jump.started += instance.OnJump;
-                @Jump.performed += instance.OnJump;
-                @Jump.canceled += instance.OnJump;
                 @Movement.started += instance.OnMovement;
                 @Movement.performed += instance.OnMovement;
                 @Movement.canceled += instance.OnMovement;
@@ -283,7 +255,6 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
     public LandActions @Land => new LandActions(this);
     public interface ILandActions
     {
-        void OnJump(InputAction.CallbackContext context);
         void OnMovement(InputAction.CallbackContext context);
         void OnMousePosition(InputAction.CallbackContext context);
         void OnShoot(InputAction.CallbackContext context);

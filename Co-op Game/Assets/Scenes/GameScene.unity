@@ -434,7 +434,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.777533, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -748,6 +748,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {fileID: 354554487}
   combat: {fileID: 1352842713}
+  health: 3
+  invinsibilityTime: 3
+  inactiveTime: 2
 --- !u!1 &394342954
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,7 +789,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 394342954}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
