@@ -7,7 +7,13 @@ public class PlayerBullet : MonoBehaviour
     [SerializeField]
     private float bulletSpeed = 50f;
     private float bulletLifetime = 2f;
-    
+
+    #region Tags and Layers
+    private string enemyTag = "Enemy";
+    private string groundTag = "Ground";
+    private string doorTag = "Door";
+    #endregion
+
     // Spawns bullet. Gives it a rigid body, then launches it from firePoint.
     public void Shoot(Transform firePoint)
     {
@@ -23,7 +29,7 @@ public class PlayerBullet : MonoBehaviour
     // If bullet hits enemy, destory bullet
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if ((collision.gameObject.tag == "Enemy") || collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Door")
+        if ((collision.gameObject.tag == enemyTag) || collision.gameObject.tag == groundTag || collision.gameObject.tag == doorTag)
         {
             Destroy(this.gameObject);
         }

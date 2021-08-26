@@ -8,6 +8,12 @@ public class EnemyBullet : MonoBehaviour
     private float bulletSpeed = 50f;
     private float bulletLifetime = 2f;
 
+    #region Tags and Layers
+    private string playerTag = "Player";
+    private string groundTag = "Ground";
+    private string doorTag = "Door";
+    #endregion
+
     // Shoot function
     public void Shoot(Transform firePoint)
     {
@@ -23,7 +29,7 @@ public class EnemyBullet : MonoBehaviour
     //Destroys bullet
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if ((collision.gameObject.tag == "Player") || (collision.gameObject.tag == "Ground") || (collision.gameObject.tag == "Door"))
+        if ((collision.gameObject.tag == playerTag) || (collision.gameObject.tag == groundTag) || (collision.gameObject.tag == doorTag))
         {
             Destroy(this.gameObject);
         }

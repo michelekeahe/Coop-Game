@@ -23,26 +23,25 @@ public class PlayerController : MonoBehaviour
     private Vector2 direction;
     #endregion
 
-    public bool interacting = false;
-
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
+    //Moves player every frame
     private void FixedUpdate()
     {
         rb.AddForce(direction * speed * Time.deltaTime, ForceMode2D.Impulse);
     }
 
-    // Movement Method
-    public void Movement(InputAction.CallbackContext context)
+    // Gets the vector 2 of Movment action from new Input System and runs it through SetVelocity function
+    public void ReadInput(InputAction.CallbackContext context)
     {
-        SetVelocity(context.ReadValue<Vector2>());
+        SetDirection(context.ReadValue<Vector2>());
     }
     
-    // Velocity method for movement
-    public void SetVelocity(Vector2 dir)
+    // Determins if player is facing left or right by reading x value of the passed Vector2
+    public void SetDirection(Vector2 dir)
     {
         direction = dir;
         horizontal = direction.x;
