@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     #region Serialized variables
     [SerializeField]
     private float speed = 3.0f;
+
     #endregion
 
     #region Private variables
@@ -23,7 +24,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 direction;
     private string currentState = "";
     #endregion
-    
+
 
     private void Start()
     {
