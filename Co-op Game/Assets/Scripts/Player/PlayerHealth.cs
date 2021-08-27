@@ -5,18 +5,10 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    #region Scripts
-    [SerializeField]
-    private PlayerController movement;
-    [SerializeField]
-    private PlayerCombat combat;
-    #endregion
 
     #region Component
     [SerializeField]
     public Image[] healthPoints;
-    [SerializeField]
-    private Image TempetureBar;
     #endregion
 
     #region Serialized variables
@@ -24,16 +16,9 @@ public class PlayerHealth : MonoBehaviour
     private int health = 10;
     [SerializeField]
     private float invinsibilityTime = 3.0f;
-    [SerializeField]
-    private float inactiveTime = 2.0f;
-    [SerializeField]
-    private float totalTempTime = 60f;
-    [SerializeField]
-    private float currentTempTime = 60f;
     #endregion
 
     #region Private Variables
-    private bool timerIsOn;
     #endregion
 
     #region Tags and Layers
@@ -46,7 +31,6 @@ public class PlayerHealth : MonoBehaviour
 
     public void FixedUpdate()
     {
-        TempCountDown();
     }
 
     // When player runs into enemy, player becomes invincible for a period of time and loses 1 health.
@@ -98,22 +82,6 @@ public class PlayerHealth : MonoBehaviour
     #endregion
 
     #region Tempature Bar
-    //starts tempature countdown
-    public void TempCountDown()
-    {
-        if (timerIsOn && currentTempTime > 0)
-        {
-            currentTempTime = currentTempTime - Time.deltaTime;
-        }
 
-        TempetureBar.fillAmount = currentTempTime / totalTempTime;
-    }
-
-    //can be deleted later. When button is pressed, toggles countdown.
-    public void StartCountDown()
-    {
-        timerIsOn = !timerIsOn;
-
-    }
     #endregion
 }
