@@ -86,31 +86,32 @@ public class PlayerHealth : MonoBehaviour
 
     #region
 
-    private void Update()
+    public void Update()
     {
-        CountDown();
     }
 
     [SerializeField]
-    private int seconds;
-    [SerializeField]
-    private int minutes;
-    private int totalTime;
-    private bool timerIsOn = true;
+    private float totalTime = 60f;
+    private bool timerIsOn;
 
-    private void CountDown()
+    public void CountDown()
     {
-        totalTime = seconds + minutes;
-
         if (timerIsOn)
         {
-            totalTime -= Mathf.RoundToInt(Time.deltaTime);
+            totalTime = totalTime - Time.deltaTime;
         }
+        Debug.Log(totalTime);
     }
 
     public void StartCountDown()
     {
         timerIsOn = !timerIsOn;
+        while (timerIsOn == true)
+        {
+            CountDown();
+            Debug.Log(totalTime);
+        }
+
     }
     #endregion
 }
