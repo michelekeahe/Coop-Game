@@ -33,15 +33,12 @@ public class PlayerCombat : MonoBehaviour
     private void Start()
     {
         mainCam = Camera.main;
-
-        // When player clicks Shoot input, then call Shoot function in Bullet class.
-        //controls.Land.Shoot.performed += _ => bulletPrefab.Shoot(firePoint);
     }
 
     public void Shoot(InputAction.CallbackContext inputType)
     {
-        bool fire = inputType.started;
-        if (fire)
+        bool Fire = inputType.started;
+        if (Fire)
         {
             bulletPrefab.Shoot(firePoint);
         }
@@ -62,7 +59,6 @@ public class PlayerCombat : MonoBehaviour
         
         transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
     }
-
     
     // No clue what this does.
     private void OnEnable()
