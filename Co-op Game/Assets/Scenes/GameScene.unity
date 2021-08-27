@@ -381,6 +381,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tempBar: {fileID: 1556789982}
+  currentTempTime: 60
+  totalTempTime: 60
 --- !u!1 &296357602
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,7 +919,19 @@ MonoBehaviour:
     m_ActionId: c3db0bb2-229a-4c83-9251-1f716ba3d205
     m_ActionName: Land/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1352842713}
+        m_TargetAssemblyTypeName: PlayerCombat, Assembly-CSharp
+        m_MethodName: Shoot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 96f3587b-c7ff-4197-ae71-d437814740f9
     m_ActionName: Land/Shoot[/Mouse/leftButton]
   - m_PersistentCalls:
@@ -2178,6 +2192,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5067696661739425818, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
   m_PrefabInstance: {fileID: 5067696662551195085}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1352842713 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5067696661739425812, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
+  m_PrefabInstance: {fileID: 5067696662551195085}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5555eb196687db43a507c6c06e6af11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1358966293
 GameObject:
   m_ObjectHideFlags: 0
