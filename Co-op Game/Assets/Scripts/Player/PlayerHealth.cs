@@ -15,6 +15,8 @@ public class PlayerHealth : MonoBehaviour
     #region Component
     [SerializeField]
     public Image[] healthPoints;
+    [SerializeField]
+    private Image TempetureBar;
     #endregion
 
     #region Serialized variables
@@ -24,6 +26,14 @@ public class PlayerHealth : MonoBehaviour
     private float invinsibilityTime = 3.0f;
     [SerializeField]
     private float inactiveTime = 2.0f;
+    [SerializeField]
+    private float totalTempTime = 60f;
+    [SerializeField]
+    private float currentTempTime = 60f;
+    #endregion
+
+    #region Private Variables
+    private bool timerIsOn;
     #endregion
 
     #region Tags and Layers
@@ -34,7 +44,10 @@ public class PlayerHealth : MonoBehaviour
     #endregion
 
 
-
+    public void FixedUpdate()
+    {
+        TempCountDown();
+    }
 
     // When player runs into enemy, player becomes invincible for a period of time and loses 1 health.
     private void OnTriggerEnter2D(Collider2D collision)
@@ -84,33 +97,22 @@ public class PlayerHealth : MonoBehaviour
     }
     #endregion
 
-    #region
-
-    public void Update()
+    #region Tempature Bar
+    //starts tempature countdown
+    public void TempCountDown()
     {
-    }
-
-    [SerializeField]
-    private float totalTime = 60f;
-    private bool timerIsOn;
-
-    public void CountDown()
-    {
-        if (timerIsOn)
+        if (timerIsOn && currentTempTime > 0)
         {
-            totalTime = totalTime - Time.deltaTime;
+            currentTempTime = currentTempTime - Time.deltaTime;
         }
-        Debug.Log(totalTime);
+
+        TempetureBar.fillAmount = currentTempTime / totalTempTime;
     }
 
+    //can be deleted later. When button is pressed, toggles countdown.
     public void StartCountDown()
     {
         timerIsOn = !timerIsOn;
-        while (timerIsOn == true)
-        {
-            CountDown();
-            Debug.Log(totalTime);
-        }
 
     }
     #endregion
