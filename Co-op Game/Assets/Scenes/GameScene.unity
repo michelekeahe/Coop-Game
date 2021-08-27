@@ -427,14 +427,14 @@ MonoBehaviour:
   m_Follow: {fileID: 354554480}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 10
+    OrthographicSize: 18
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.7759434, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -520,6 +520,7 @@ GameObject:
   - component: {fileID: 354554487}
   - component: {fileID: 354554488}
   - component: {fileID: 354554486}
+  - component: {fileID: 354554482}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -584,7 +585,7 @@ SpriteRenderer:
   m_SortingLayerID: -2092026681
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 812006383bdf17b49bfdaf8fdf41ea95, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d3670d9d4cbcfeb40b240438cb6171b4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -595,6 +596,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &354554482
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354554479}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 263524b2a9f09944281ddc96a5d74d1a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!70 &354554483
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -624,7 +644,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 3
+  m_LinearDrag: 4
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -657,22 +677,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 354554487}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: Jump
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 9a1a813f-0d6a-4e47-8959-7385e00a17d2
-    m_ActionName: Land/Jump[/Keyboard/space]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 354554487}
@@ -895,7 +899,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 18
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1652,7 +1656,7 @@ MonoBehaviour:
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 0
   m_LookaheadIgnoreY: 0
-  m_XDamping: 3
+  m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
   m_TargetMovementOnly: 1
@@ -1663,8 +1667,8 @@ MonoBehaviour:
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
-  m_SoftZoneWidth: 0.1
-  m_SoftZoneHeight: 0.2
+  m_SoftZoneWidth: 0.3
+  m_SoftZoneHeight: 0.45
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
@@ -1936,6 +1940,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 354554480}
     m_Modifications:
+    - target: {fileID: 5067696661739425813, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d71150416fbba2b498cd63c757316748, type: 3}
     - target: {fileID: 5067696661739425818, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2003,7 +2011,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6704331756686872303, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 29
+      value: 28.09
       objectReference: {fileID: 0}
     - target: {fileID: 6704331756686872303, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: m_LocalPosition.y

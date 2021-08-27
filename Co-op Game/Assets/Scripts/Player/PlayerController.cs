@@ -21,7 +21,9 @@ public class PlayerController : MonoBehaviour
     private bool isFacingRight = true;
     private float horizontal = 0.0f;
     private Vector2 direction;
+    private string currentState = "";
     #endregion
+    
 
     private void Start()
     {
@@ -44,18 +46,7 @@ public class PlayerController : MonoBehaviour
     public void SetDirection(Vector2 dir)
     {
         direction = dir;
-        horizontal = direction.x;
-        if (horizontal < 0 && isFacingRight) Flip();
-        else if (horizontal > 0 && !isFacingRight) Flip();
-    }
-
-    // Flip method
-    private void Flip()
-    {
-        Vector3 localScale = transform.localScale;
-        localScale.x *= -1;
-        transform.localScale = localScale;
-        isFacingRight = !isFacingRight;
+        Debug.Log(dir);
     }
 
     // Interact method to interact with objects such as doors
