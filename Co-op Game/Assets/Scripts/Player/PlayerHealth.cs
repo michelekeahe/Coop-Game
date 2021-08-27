@@ -43,17 +43,12 @@ public class PlayerHealth : MonoBehaviour
         {
             //Turns layer to "Invincibility"
             this.gameObject.layer = LayerMask.NameToLayer(invincibilityLayer);
-            //disables movement and combat
-            movement.enabled = false;
-            combat.enabled = false;
             //reduces health
             health -= 1;
 
             //Updates HealthBar
             HealthBarFiller();
 
-            //Turns movement on after x seconds
-            Invoke(nameof(TurnOnMovement), inactiveTime);
 
             // Returns to regular collision layer after x seconds.
             Invoke(nameof(TurnOnCollisionsAndCombat), invinsibilityTime);
@@ -62,19 +57,14 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    //Allows for shooting and puts player layer back on player
+    // Puts player layer back on player
     private void TurnOnCollisionsAndCombat()
     {
         this.gameObject.layer = LayerMask.NameToLayer(playerLayer);
-        combat.enabled = true;
     }
 
-    //enables movmement.
-    private void TurnOnMovement()
-    {
-        movement.enabled = true;
-    }
 
+    #region Health Bar
     //Fills health bar
     private void HealthBarFiller()
     {
@@ -92,4 +82,35 @@ public class PlayerHealth : MonoBehaviour
     {
         return ((pointNumber) >= health);
     }
+    #endregion
+
+    #region
+
+    private void Update()
+    {
+        CountDown();
+    }
+
+    [SerializeField]
+    private int seconds;
+    [SerializeField]
+    private int minutes;
+    private int totalTime;
+    private bool timerIsOn = true;
+
+    private void CountDown()
+    {
+        totalTime = seconds + minutes;
+
+        if (timerIsOn)
+        {
+            totalTime -= Mathf.RoundToInt(Time.deltaTime);
+        }
+    }
+
+    public void StartCountDown()
+    {
+        timerIsOn = !timerIsOn;
+    }
+    #endregion
 }
