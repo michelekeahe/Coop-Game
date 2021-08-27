@@ -15,6 +15,8 @@ public class PlayerHealth : MonoBehaviour
     #region Component
     [SerializeField]
     public Image[] healthPoints;
+    [SerializeField]
+    private Image TempetureBar;
     #endregion
 
     #region Serialized variables
@@ -24,6 +26,14 @@ public class PlayerHealth : MonoBehaviour
     private float invinsibilityTime = 3.0f;
     [SerializeField]
     private float inactiveTime = 2.0f;
+    [SerializeField]
+    private float totalTempTime = 60f;
+    [SerializeField]
+    private float currentTempTime = 60f;
+    #endregion
+
+    #region Private Variables
+    private bool timerIsOn;
     #endregion
 
     #region Tags and Layers
@@ -34,7 +44,10 @@ public class PlayerHealth : MonoBehaviour
     #endregion
 
 
-
+    public void FixedUpdate()
+    {
+        TempCountDown();
+    }
 
     // When player runs into enemy, player becomes invincible for a period of time and loses 1 health.
     private void OnTriggerEnter2D(Collider2D collision)
@@ -43,17 +56,12 @@ public class PlayerHealth : MonoBehaviour
         {
             //Turns layer to "Invincibility"
             this.gameObject.layer = LayerMask.NameToLayer(invincibilityLayer);
-            //disables movement and combat
-            movement.enabled = false;
-            combat.enabled = false;
             //reduces health
             health -= 1;
 
             //Updates HealthBar
             HealthBarFiller();
 
-            //Turns movement on after x seconds
-            Invoke(nameof(TurnOnMovement), inactiveTime);
 
             // Returns to regular collision layer after x seconds.
             Invoke(nameof(TurnOnCollisionsAndCombat), invinsibilityTime);
@@ -62,19 +70,14 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    //Allows for shooting and puts player layer back on player
+    // Puts player layer back on player
     private void TurnOnCollisionsAndCombat()
     {
         this.gameObject.layer = LayerMask.NameToLayer(playerLayer);
-        combat.enabled = true;
     }
 
-    //enables movmement.
-    private void TurnOnMovement()
-    {
-        movement.enabled = true;
-    }
 
+    #region Health Bar
     //Fills health bar
     private void HealthBarFiller()
     {
@@ -92,4 +95,25 @@ public class PlayerHealth : MonoBehaviour
     {
         return ((pointNumber) >= health);
     }
+    #endregion
+
+    #region Tempature Bar
+    //starts tempature countdown
+    public void TempCountDown()
+    {
+        if (timerIsOn && currentTempTime > 0)
+        {
+            currentTempTime = currentTempTime - Time.deltaTime;
+        }
+
+        TempetureBar.fillAmount = currentTempTime / totalTempTime;
+    }
+
+    //can be deleted later. When button is pressed, toggles countdown.
+    public void StartCountDown()
+    {
+        timerIsOn = !timerIsOn;
+
+    }
+    #endregion
 }
