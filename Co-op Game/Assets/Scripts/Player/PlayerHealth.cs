@@ -15,7 +15,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField]
     private int health = 10;
     [SerializeField]
-    private float invinsibilityTime = 3.0f;
+    private float invincibilityLifetime = 3.0f;
     #endregion
 
     #region Private Variables
@@ -24,15 +24,10 @@ public class PlayerHealth : MonoBehaviour
     #region Tags and Layers
     private string enemyTag = "Enemy";
     private string enemyBulletTag = "EnemyBullet";
-    private string invincibilityLayer = "Invinicibility";
+    private string invincibilityLayer = "Invincibility";
     private string playerLayer = "Player";
     #endregion
-
-
-    public void FixedUpdate()
-    {
-    }
-
+    
     // When player runs into enemy, player becomes invincible for a period of time and loses 1 health.
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -45,10 +40,9 @@ public class PlayerHealth : MonoBehaviour
 
             //Updates HealthBar
             HealthBarFiller();
-
-
+            
             // Returns to regular collision layer after x seconds.
-            Invoke(nameof(TurnOnCollisionsAndCombat), invinsibilityTime);
+            Invoke(nameof(TurnOnCollisionsAndCombat), invincibilityLifetime);
 
             Debug.Log(health);
         }
@@ -79,9 +73,5 @@ public class PlayerHealth : MonoBehaviour
     {
         return ((pointNumber) >= health);
     }
-    #endregion
-
-    #region Tempature Bar
-
     #endregion
 }

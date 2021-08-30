@@ -19,10 +19,9 @@ public class ClimateTimer : MonoBehaviour
 
     #region private variables
     private float timeRemaining;
-    private bool timerIsOn;
+    private bool TimerIsOn; 
     #endregion
-
-
+    
     private void Update()
     {
         TempCountDown();
@@ -31,20 +30,17 @@ public class ClimateTimer : MonoBehaviour
     //starts tempature countdown
     public void TempCountDown()
     {
-        if (timerIsOn && currentTempTime > 0)
+        if (TimerIsOn && currentTempTime > 0)
         {
             currentTempTime = currentTempTime - Time.deltaTime;
         }
         timeRemaining = currentTempTime / totalTempTime;
         tempBar.fillAmount = timeRemaining;
     }
-
-
+    
     //can be deleted later. When button is pressed, toggles countdown.
     public void StartCountDown()
     {
-        timerIsOn = !timerIsOn;
+        TimerIsOn = !TimerIsOn;
     }
-
-
 }
