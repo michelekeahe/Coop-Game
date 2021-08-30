@@ -12,8 +12,7 @@ public class Door : MonoBehaviour
     private float doorOpenTime = 0f;
 
     private string interactionTag = "InteractionCheck";
-
-
+    
     //If door tag collides with interactionCheck trigger, then OpenDoor
     private void OnTriggerEnter2D(Collider2D collision)
     {

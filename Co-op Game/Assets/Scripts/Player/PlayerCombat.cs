@@ -12,17 +12,15 @@ public class PlayerCombat : MonoBehaviour
     #endregion
 
     #region Declaring component
-    [SerializeField]
-    private PlayerBullet bulletPrefab;
-    [SerializeField]
-    private Transform firePoint;
+    [SerializeField] private PlayerBullet bulletPrefab;
+    [SerializeField] private Transform firePoint;
+    [SerializeField] private BoxCollider2D meleePoint;
     private Camera mainCam;
     #endregion
 
     #region Variables
     public int currentAmmo = 25;
-    [SerializeField]
-    private int maxAmmo = 50;
+    public int maxAmmo = 50;
     private float angle = 0f;
     public float aimSpeed = 0;
     #endregion
@@ -43,12 +41,16 @@ public class PlayerCombat : MonoBehaviour
         FollowMouse();
     }
 
+    // ======================
+    // SHOOT
+    // ======================
+
     public void Shoot(InputAction.CallbackContext inputType)
     {
-        bool Fire = inputType.started;
+        bool FireStart = inputType.started;
 
         // Shoot bullet from firepoint & lose ammo per shot
-        if (Fire && currentAmmo > 0)
+        if (FireStart && currentAmmo > 0)
         {
             bulletPrefab.Shoot(firePoint);
             currentAmmo--;
@@ -64,6 +66,24 @@ public class PlayerCombat : MonoBehaviour
         angle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
         
         transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
+    }
+
+    // ======================
+    // MELEE
+    // ======================
+
+    public void Melee(InputAction.CallbackContext inputType)
+    {
+        bool MeleeStart = inputType.started;
+
+        if ((MeleeStart) && (inputType.started || inputType.performed))
+        {
+            Debug.Log("Melee ");
+            meleePoint.enabled = true;
+        } else {
+            Debug.Log("Sheath melee");
+            meleePoint.enabled = false;
+        }
     }
 
     // ======================

@@ -43,8 +43,6 @@ public class PlayerHealth : MonoBehaviour
             
             // Returns to regular collision layer after x seconds.
             Invoke(nameof(TurnOnCollisionsAndCombat), invincibilityLifetime);
-
-            Debug.Log(health);
         }
     }
 

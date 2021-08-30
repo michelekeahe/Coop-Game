@@ -12,6 +12,8 @@ TagManager:
   - Door
   - InteractionCheck
   - Ammo
+  - Weapon
+  - PlayerMelee
   layers:
   - Default
   - TransparentFX
