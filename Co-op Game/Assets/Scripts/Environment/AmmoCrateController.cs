@@ -66,7 +66,7 @@ public class AmmoCrateController : MonoBehaviour
             Debug.Log(playerCombat.currentAmmo);
         }
 
-        Debug.Log("Opened Box! Gained " + ammoCount + " ammo!");
+        Debug.Log("Opened Box! Gained " + ammoCount + " ammo! Total: " + totalAmmo);
         // play Box Open animation
 
         Destroy(this.gameObject);

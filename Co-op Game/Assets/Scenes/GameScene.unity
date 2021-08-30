@@ -271,7 +271,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -760.1875, y: 453.5691}
+  m_AnchoredPosition: {x: -958, y: 555}
   m_SizeDelta: {x: 275.625, y: 62.8618}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &115856850
@@ -600,7 +600,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &314505970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -630,6 +630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   bulletDamage: 1
+  meleeDamage: 1
 --- !u!50 &314505972
 Rigidbody2D:
   serializedVersion: 4
@@ -1076,6 +1077,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: e5061b45-d468-411f-a193-084f7dcc63e0
     m_ActionName: Land/Interact[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1352842713}
+        m_TargetAssemblyTypeName: PlayerCombat, Assembly-CSharp
+        m_MethodName: Melee
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 7c092734-e7da-4e5e-b00c-3efeacca0f57
+    m_ActionName: Land/Attack[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Land
@@ -2157,7 +2174,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -444.7}
+  m_AnchoredPosition: {x: -963, y: 658}
   m_SizeDelta: {x: 505.1, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1185185306
@@ -2612,7 +2629,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 762, y: -802}
+  m_AnchoredPosition: {x: 316, y: 104}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1556789982
@@ -3498,7 +3515,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3860916617528585866, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3860916617528585867, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: playerPos
@@ -3557,10 +3574,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 354554480}
     m_Modifications:
-    - target: {fileID: 5067696661739425812, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
-      propertyPath: currentAmmo
-      value: 49
-      objectReference: {fileID: 0}
     - target: {fileID: 5067696661739425813, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -3680,7 +3693,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6704331756686872305, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
