@@ -12,6 +12,7 @@ TagManager:
   - Door
   - InteractionCheck
   - Ammo
+  - Weapon
   layers:
   - Default
   - TransparentFX

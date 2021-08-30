@@ -47,9 +47,7 @@ public class PlayerController : MonoBehaviour
     public void SetDirection(Vector2 dir)
     {
         direction = dir;
-        Debug.Log(dir);
     }
-
     // Interact method to interact with objects such as doors
     public void Interact(InputAction.CallbackContext context)
     {
@@ -61,5 +59,5 @@ public class PlayerController : MonoBehaviour
         {
             interactionTrigger.enabled = false;
         }
-    }
+    } 
 }

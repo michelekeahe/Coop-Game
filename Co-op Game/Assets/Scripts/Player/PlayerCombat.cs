@@ -22,7 +22,7 @@ public class PlayerCombat : MonoBehaviour
     #region Variables
     public int currentAmmo = 25;
     [SerializeField]
-    private int maxAmmo = 50;
+    public int maxAmmo = 50;
     private float angle = 0f;
     public float aimSpeed = 0;
     #endregion
