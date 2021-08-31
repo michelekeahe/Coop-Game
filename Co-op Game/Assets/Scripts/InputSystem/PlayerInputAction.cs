@@ -51,7 +51,7 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Attack"",
+                    ""name"": ""Melee"",
                     ""type"": ""Button"",
                     ""id"": ""7c092734-e7da-4e5e-b00c-3efeacca0f57"",
                     ""expectedControlType"": ""Button"",
@@ -155,7 +155,7 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Attack"",
+                    ""action"": ""Melee"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -170,7 +170,7 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
         m_Land_MousePosition = m_Land.FindAction("MousePosition", throwIfNotFound: true);
         m_Land_Shoot = m_Land.FindAction("Shoot", throwIfNotFound: true);
         m_Land_Interact = m_Land.FindAction("Interact", throwIfNotFound: true);
-        m_Land_Attack = m_Land.FindAction("Attack", throwIfNotFound: true);
+        m_Land_Melee = m_Land.FindAction("Melee", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -224,7 +224,7 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
     private readonly InputAction m_Land_MousePosition;
     private readonly InputAction m_Land_Shoot;
     private readonly InputAction m_Land_Interact;
-    private readonly InputAction m_Land_Attack;
+    private readonly InputAction m_Land_Melee;
     public struct LandActions
     {
         private @PlayerInputAction m_Wrapper;
@@ -233,7 +233,7 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
         public InputAction @MousePosition => m_Wrapper.m_Land_MousePosition;
         public InputAction @Shoot => m_Wrapper.m_Land_Shoot;
         public InputAction @Interact => m_Wrapper.m_Land_Interact;
-        public InputAction @Attack => m_Wrapper.m_Land_Attack;
+        public InputAction @Melee => m_Wrapper.m_Land_Melee;
         public InputActionMap Get() { return m_Wrapper.m_Land; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -255,9 +255,9 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                 @Interact.started -= m_Wrapper.m_LandActionsCallbackInterface.OnInteract;
                 @Interact.performed -= m_Wrapper.m_LandActionsCallbackInterface.OnInteract;
                 @Interact.canceled -= m_Wrapper.m_LandActionsCallbackInterface.OnInteract;
-                @Attack.started -= m_Wrapper.m_LandActionsCallbackInterface.OnAttack;
-                @Attack.performed -= m_Wrapper.m_LandActionsCallbackInterface.OnAttack;
-                @Attack.canceled -= m_Wrapper.m_LandActionsCallbackInterface.OnAttack;
+                @Melee.started -= m_Wrapper.m_LandActionsCallbackInterface.OnMelee;
+                @Melee.performed -= m_Wrapper.m_LandActionsCallbackInterface.OnMelee;
+                @Melee.canceled -= m_Wrapper.m_LandActionsCallbackInterface.OnMelee;
             }
             m_Wrapper.m_LandActionsCallbackInterface = instance;
             if (instance != null)
@@ -274,9 +274,9 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                 @Interact.started += instance.OnInteract;
                 @Interact.performed += instance.OnInteract;
                 @Interact.canceled += instance.OnInteract;
-                @Attack.started += instance.OnAttack;
-                @Attack.performed += instance.OnAttack;
-                @Attack.canceled += instance.OnAttack;
+                @Melee.started += instance.OnMelee;
+                @Melee.performed += instance.OnMelee;
+                @Melee.canceled += instance.OnMelee;
             }
         }
     }
@@ -287,6 +287,6 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
         void OnMousePosition(InputAction.CallbackContext context);
         void OnShoot(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
-        void OnAttack(InputAction.CallbackContext context);
+        void OnMelee(InputAction.CallbackContext context);
     }
 }

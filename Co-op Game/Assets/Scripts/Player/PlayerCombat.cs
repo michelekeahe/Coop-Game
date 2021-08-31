@@ -74,14 +74,11 @@ public class PlayerCombat : MonoBehaviour
 
     public void Melee(InputAction.CallbackContext inputType)
     {
-        bool MeleeStart = inputType.started;
-
-        if ((MeleeStart) && (inputType.started || inputType.performed))
+        // When hit melee keybind, enable collider and then disable.
+        if (inputType.started || inputType.performed)
         {
-            Debug.Log("Melee ");
             meleePoint.enabled = true;
         } else {
-            Debug.Log("Sheath melee");
             meleePoint.enabled = false;
         }
     }

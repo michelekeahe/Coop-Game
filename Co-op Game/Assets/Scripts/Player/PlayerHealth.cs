@@ -5,36 +5,30 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-
-    #region Component
-    [SerializeField]
+    // Components
     public Image[] healthPoints;
-    #endregion
+    [SerializeField] Rigidbody2D rb;
 
-    #region Serialized variables
-    [SerializeField]
-    private int health = 10;
-    [SerializeField]
-    private float invincibilityLifetime = 3.0f;
-    #endregion
+    // Variables
+    [SerializeField] private int health = 10;
+    [SerializeField] private float invincibilityLifetime = 3.0f;
+    [SerializeField] private float knockbackForce = 4f;
 
-    #region Private Variables
-    #endregion
-
-    #region Tags and Layers
+    // Tags and layers
     private string enemyTag = "Enemy";
     private string enemyBulletTag = "EnemyBullet";
     private string invincibilityLayer = "Invincibility";
     private string playerLayer = "Player";
-    #endregion
     
     // When player runs into enemy, player becomes invincible for a period of time and loses 1 health.
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == enemyTag || collision.gameObject.tag == enemyBulletTag)
         {
+            Knockback(this.transform);
+
             //Turns layer to "Invincibility"
-            this.gameObject.layer = LayerMask.NameToLayer(invincibilityLayer);
+            //this.gameObject.layer = LayerMask.NameToLayer(invincibilityLayer);
             //reduces health
             health -= 1;
 
@@ -42,7 +36,7 @@ public class PlayerHealth : MonoBehaviour
             HealthBarFiller();
             
             // Returns to regular collision layer after x seconds.
-            Invoke(nameof(TurnOnCollisionsAndCombat), invincibilityLifetime);
+            //Invoke(nameof(TurnOnCollisionsAndCombat), invincibilityLifetime);
         }
     }
 
@@ -51,9 +45,7 @@ public class PlayerHealth : MonoBehaviour
     {
         this.gameObject.layer = LayerMask.NameToLayer(playerLayer);
     }
-
-
-    #region Health Bar
+    
     //Fills health bar
     private void HealthBarFiller()
     {
@@ -71,5 +63,12 @@ public class PlayerHealth : MonoBehaviour
     {
         return ((pointNumber) >= health);
     }
-    #endregion
+
+    // Knockback when damaged
+    private void Knockback(Transform obj)
+    {
+        Vector3 direction = (obj.transform.position).normalized;
+
+        rb.AddForce(-direction * this.knockbackForce, ForceMode2D.Impulse);
+    }
 }
