@@ -628,7 +628,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c41471ed0cb1f1943a9ac9528de67796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 314505972}
   maxHealth: 3
+  knockbackForce: 4
   bulletDamage: 1
   meleeDamage: 1
 --- !u!50 &314505972
@@ -662,7 +664,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.05, y: 0}
@@ -1136,8 +1138,10 @@ MonoBehaviour:
   - {fileID: 2050658183}
   - {fileID: 1667830832}
   - {fileID: 296357604}
+  rb: {fileID: 354554485}
   health: 10
   invincibilityLifetime: 3
+  knockbackForce: 10
 --- !u!1 &394342954
 GameObject:
   m_ObjectHideFlags: 0
@@ -2107,8 +2111,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: -891676035970118650, guid: 2feffe1514a54ea4ea734179913a8dbb, type: 3}
   firepoint: {fileID: 1073068941}
   playerPos: {fileID: 354554480}
-  minShootTime: 1.5
-  maxShootTime: 2.5
+  minShootTime: 0.5
+  maxShootTime: 1.5
 --- !u!1 &1073068940
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,28 +4,25 @@ using UnityEngine;
 
 public class EnemyShoot : MonoBehaviour
 {
-    #region Declaring Compenents
+    // Declaring Compenents
     [SerializeField]
     private EnemyBullet bulletPrefab;
     [SerializeField]
     private Transform firepoint;
     [SerializeField]
     private Transform playerPos;
-    #endregion
 
-    #region Serialized variables
+    // Serialized variables
     // Variables used to decide of often enemy shoots
     [SerializeField]
     private float minShootTime = .5f;
     [SerializeField]
     private float maxShootTime = 1f;
-    #endregion
 
-    #region Private variables
+    // Private variables
     private float randShootTime = 0f;
     // Bool to check is player is in range to shoot at.
     private bool isInRage = false;
-    #endregion
 
     // If the player is shoot range, then start the delay corutine.
     private void OnTriggerEnter2D(Collider2D collision)
@@ -73,7 +70,7 @@ public class EnemyShoot : MonoBehaviour
 
             // Wait after random period of time
             randShootTime = Random.Range(minShootTime, maxShootTime);
-            yield return new WaitForSeconds(.5f);
+            yield return new WaitForSeconds(randShootTime);
 
             // Shoot
             this.bulletPrefab.Shoot(firepoint);
