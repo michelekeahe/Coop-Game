@@ -33,15 +33,12 @@ public class EnemyMovement : MonoBehaviour
 
             //sending Ray. Only interacts with Player and Ground layers.
             RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, distanceToPlayer, 1 << LayerMask.NameToLayer("Player") | 1 << LayerMask.NameToLayer("Ground"));
-            Debug.DrawRay(transform.position, direction * distanceToPlayer, Color.red);
 
             //If ray hits something, if it hits player, then follow him.
             if (hit.collider != null)
             {
                 if (hit.collider.tag == "Player")
                 {
-                    Debug.DrawRay(transform.position, direction * distanceToPlayer, Color.green);
-
                     FollowPlayer(direction, distanceToPlayer);
                 }
             }
