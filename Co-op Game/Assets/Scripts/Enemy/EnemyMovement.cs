@@ -26,19 +26,33 @@ public class EnemyMovement : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            FollowPlayer();
+            // Getting distance from and to player. 
+            Vector2 distanceFromPlayer = playerPos.position - transform.position;
+            Vector2 direction = distanceFromPlayer.normalized;
+            float distanceToPlayer = distanceFromPlayer.magnitude;
+
+            //sending Ray. Only interacts with Player and Ground layers.
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, distanceToPlayer, 1 << LayerMask.NameToLayer("Player") | 1 << LayerMask.NameToLayer("Ground"));
+            Debug.DrawRay(transform.position, direction * distanceToPlayer, Color.red);
+
+            //If ray hits something, if it hits player, then follow him.
+            if (hit.collider != null)
+            {
+                if (hit.collider.tag == "Player")
+                {
+                    Debug.DrawRay(transform.position, direction * distanceToPlayer, Color.green);
+
+                    FollowPlayer(direction, distanceToPlayer);
+                }
+            }
+
         }
     }
 
     // Enemy follows player if enemy is grounded && and if player is within x units
     // Enemy stops following player if player is within StopDistance.
-    private void FollowPlayer()
+    private void FollowPlayer(Vector2 direction, float distanceToPlayer)
     {
-        // Getting distance from and to player. 
-        Vector3 distanceFromPlayer = playerPos.position - transform.position;
-        Vector3 direction = distanceFromPlayer.normalized;
-        float distanceToPlayer = distanceFromPlayer.magnitude;
-
         // Flips GameObject depending on direction it's moving towards
         SetVelocity(direction);
         
