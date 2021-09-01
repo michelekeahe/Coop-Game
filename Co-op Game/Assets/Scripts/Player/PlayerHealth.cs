@@ -25,7 +25,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (collision.gameObject.tag == enemyTag || collision.gameObject.tag == enemyBulletTag)
         {
-            Knockback(this.transform);
+            Knockback(collision.transform);
 
             //Turns layer to "Invincibility"
             //this.gameObject.layer = LayerMask.NameToLayer(invincibilityLayer);
@@ -67,8 +67,8 @@ public class PlayerHealth : MonoBehaviour
     // Knockback when damaged
     private void Knockback(Transform obj)
     {
-        Vector3 direction = (obj.transform.position).normalized;
+        Vector3 direction = transform.position - obj.transform.position;
 
-        rb.AddForce(direction * this.knockbackForce, ForceMode2D.Impulse);
+        rb.AddForce(direction.normalized * this.knockbackForce, ForceMode2D.Impulse);
     }
 }
