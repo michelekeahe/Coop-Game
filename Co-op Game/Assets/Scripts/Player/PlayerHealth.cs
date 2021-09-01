@@ -69,6 +69,6 @@ public class PlayerHealth : MonoBehaviour
     {
         Vector3 direction = (obj.transform.position).normalized;
 
-        rb.AddForce(-direction * this.knockbackForce, ForceMode2D.Impulse);
+        rb.AddForce(direction * this.knockbackForce, ForceMode2D.Impulse);
     }
 }
