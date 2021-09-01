@@ -21,20 +21,20 @@ public class EnemyHealth : MonoBehaviour
         if (collision.gameObject.tag == playerBulletTag)
         {
             TakeDamage(bulletDamage);
+            Knockback(collision.transform);
         }
 
         // Melee damage
         if (collision.gameObject.tag == playerMeleeTag)
         {
             TakeDamage(meleeDamage);
+            Knockback(collision.transform);
         }
     }
 
     // Take Damage function
     private void TakeDamage(int damageDone)
     {
-        Knockback(this.transform);
-
         // Reduce health by damage taken
         this.maxHealth -= damageDone;
 
@@ -48,8 +48,8 @@ public class EnemyHealth : MonoBehaviour
     // Knockback when damaged
     private void Knockback(Transform obj)
     {
-        Vector3 direction = (obj.transform.position).normalized;
+        Vector3 direction = transform.position - obj.transform.position;
 
-        rb.AddForce(direction * this.knockbackForce, ForceMode2D.Impulse);
+        rb.AddForce(direction.normalized * this.knockbackForce, ForceMode2D.Impulse);
     }
 }
