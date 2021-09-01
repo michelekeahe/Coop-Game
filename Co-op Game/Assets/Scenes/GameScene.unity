@@ -381,8 +381,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tempBar: {fileID: 1556789982}
-  currentTempTime: 60
-  totalTempTime: 60
+  currentTempTime: 30
+  totalTempTime: 30
 --- !u!1001 &122112138
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8462,7 +8462,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 354554485}
   interactionTrigger: {fileID: 394342956}
-  speed: 30
+  speed: 20
 --- !u!114 &354554488
 MonoBehaviour:
   m_ObjectHideFlags: 0
