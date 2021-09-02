@@ -130,10 +130,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3860916617024998168, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
+      propertyPath: m_Radius
+      value: 8.79
+      objectReference: {fileID: 0}
     - target: {fileID: 3860916617281668230, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: playerPos
       value: 
-      objectReference: {fileID: 628620087}
+      objectReference: {fileID: 1580829170}
     - target: {fileID: 3860916617528585864, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: m_LinearDrag
       value: 3
@@ -147,12 +151,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3860916617528585867, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
+      propertyPath: speed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860916617528585867, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: playerPos
       value: 
-      objectReference: {fileID: 628620087}
+      objectReference: {fileID: 1580829170}
     - target: {fileID: 3860916617528585868, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3860916617528585868, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -206,7 +214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 98506976}
   - component: {fileID: 98506977}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HallwayB (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -289,7 +297,7 @@ GameObject:
   m_Component:
   - component: {fileID: 132508511}
   - component: {fileID: 132508512}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Room (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -372,7 +380,7 @@ GameObject:
   m_Component:
   - component: {fileID: 154176490}
   - component: {fileID: 154176491}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Room (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -455,7 +463,7 @@ GameObject:
   m_Component:
   - component: {fileID: 172804219}
   - component: {fileID: 172804220}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Room (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -538,7 +546,7 @@ GameObject:
   m_Component:
   - component: {fileID: 180356698}
   - component: {fileID: 180356699}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HallwayB (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -621,7 +629,7 @@ GameObject:
   m_Component:
   - component: {fileID: 190480773}
   - component: {fileID: 190480774}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Room (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -704,7 +712,7 @@ GameObject:
   m_Component:
   - component: {fileID: 191555377}
   - component: {fileID: 191555378}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HallwayB (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -787,7 +795,7 @@ GameObject:
   m_Component:
   - component: {fileID: 254658109}
   - component: {fileID: 254658110}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HallwayB (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -870,7 +878,7 @@ GameObject:
   m_Component:
   - component: {fileID: 318421144}
   - component: {fileID: 318421145}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HallwayB (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -952,7 +960,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 328926706}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RoomA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1003,12 +1011,16 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6704331756686872300, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
+      propertyPath: speed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6704331756686872300, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: playerPos
       value: 
-      objectReference: {fileID: 628620087}
+      objectReference: {fileID: 1580829170}
     - target: {fileID: 6704331756686872303, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6704331756686872303, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1086,7 +1098,7 @@ GameObject:
   m_Component:
   - component: {fileID: 343850173}
   - component: {fileID: 343850174}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hallway (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1201,7 +1213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 412117531}
   - component: {fileID: 412117532}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1284,7 +1296,7 @@ GameObject:
   m_Component:
   - component: {fileID: 426732938}
   - component: {fileID: 426732939}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hallway (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1364,10 +1376,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3860916617024998168, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
+      propertyPath: m_Radius
+      value: 8.79
+      objectReference: {fileID: 0}
     - target: {fileID: 3860916617281668230, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: playerPos
       value: 
-      objectReference: {fileID: 628620087}
+      objectReference: {fileID: 1580829170}
     - target: {fileID: 3860916617528585864, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: m_LinearDrag
       value: 3
@@ -1381,12 +1397,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3860916617528585867, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
+      propertyPath: speed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860916617528585867, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: playerPos
       value: 
-      objectReference: {fileID: 628620087}
+      objectReference: {fileID: 1580829170}
     - target: {fileID: 3860916617528585868, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3860916617528585868, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1440,7 +1460,7 @@ GameObject:
   m_Component:
   - component: {fileID: 545737267}
   - component: {fileID: 545737268}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HallwayB (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1520,10 +1540,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3860916617024998168, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
+      propertyPath: m_Radius
+      value: 8.79
+      objectReference: {fileID: 0}
     - target: {fileID: 3860916617281668230, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: playerPos
       value: 
-      objectReference: {fileID: 628620087}
+      objectReference: {fileID: 1580829170}
     - target: {fileID: 3860916617528585864, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: m_LinearDrag
       value: 3
@@ -1537,12 +1561,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3860916617528585867, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
+      propertyPath: speed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860916617528585867, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: playerPos
       value: 
-      objectReference: {fileID: 628620087}
+      objectReference: {fileID: 1580829170}
     - target: {fileID: 3860916617528585868, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3860916617528585868, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1596,7 +1624,7 @@ GameObject:
   m_Component:
   - component: {fileID: 573878676}
   - component: {fileID: 573878677}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hallway (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1679,7 +1707,7 @@ GameObject:
   m_Component:
   - component: {fileID: 577876841}
   - component: {fileID: 577876842}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Room (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1768,12 +1796,16 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6704331756686872300, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
+      propertyPath: speed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6704331756686872300, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: playerPos
       value: 
-      objectReference: {fileID: 628620087}
+      objectReference: {fileID: 1580829170}
     - target: {fileID: 6704331756686872303, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 6704331756686872303, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1841,293 +1873,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
---- !u!1 &628620079
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 628620087}
-  - component: {fileID: 628620086}
-  - component: {fileID: 628620085}
-  - component: {fileID: 628620084}
-  - component: {fileID: 628620083}
-  - component: {fileID: 628620082}
-  - component: {fileID: 628620081}
-  - component: {fileID: 628620080}
-  m_Layer: 3
-  m_Name: Player
-  m_TagString: Player
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!95 &628620080
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628620079}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 263524b2a9f09944281ddc96a5d74d1a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &628620081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628620079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 0040e31b95278884ba66ac7b39571392, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 628620083}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: ReadInput
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: c3db0bb2-229a-4c83-9251-1f716ba3d205
-    m_ActionName: Land/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1972433659}
-        m_TargetAssemblyTypeName: PlayerCombat, Assembly-CSharp
-        m_MethodName: Shoot
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 96f3587b-c7ff-4197-ae71-d437814740f9
-    m_ActionName: Land/Shoot[/Mouse/leftButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: e77e0b20-8c4a-43bf-af4a-760f8a247962
-    m_ActionName: Land/MousePosition[/Mouse/position]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 628620083}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: Interact
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: e5061b45-d468-411f-a193-084f7dcc63e0
-    m_ActionName: Land/Interact[/Keyboard/e]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1972433659}
-        m_TargetAssemblyTypeName: PlayerCombat, Assembly-CSharp
-        m_MethodName: Melee
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 7c092734-e7da-4e5e-b00c-3efeacca0f57
-    m_ActionName: Land/Attack[/Keyboard/space]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Land
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
---- !u!114 &628620082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628620079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b779e2e999b73ba46a4eadd4a14b03dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  rb: {fileID: 628620084}
-  health: 10
-  invincibilityLifetime: 3
-  knockbackForce: 2
---- !u!114 &628620083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628620079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99e959380b3b91946a7edabaf56d6b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 628620084}
-  interactionTrigger: {fileID: 937442849}
-  speed: 20
---- !u!50 &628620084
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628620079}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 0.1
-  m_LinearDrag: 10
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!70 &628620085
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628620079}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.07, y: -0.4}
-  m_Size: {x: 1.3, y: 5.89}
-  m_Direction: 0
---- !u!212 &628620086
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628620079}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2092026681
-  m_SortingLayer: 1
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: d3670d9d4cbcfeb40b240438cb6171b4, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &628620087
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628620079}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.3, y: 1.9, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1972433660}
-  - {fileID: 937442850}
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &645088881
 GameObject:
   m_ObjectHideFlags: 0
@@ -2137,7 +1882,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 645088882}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RoomB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2169,7 +1914,7 @@ GameObject:
   m_Component:
   - component: {fileID: 679675825}
   - component: {fileID: 679675826}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hallway (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2252,7 +1997,7 @@ GameObject:
   m_Component:
   - component: {fileID: 709890257}
   - component: {fileID: 709890258}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Room (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2421,7 +2166,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 782736065}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HallwayB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2484,7 +2229,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 796875326}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.513224, y: -2.6763325, z: 1.1367502}
+  m_LocalPosition: {x: -3.2132242, y: -5.7056427, z: 1.1367502}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 350352453}
@@ -2585,7 +2330,7 @@ GameObject:
   m_Component:
   - component: {fileID: 805519981}
   - component: {fileID: 805519982}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HallwayB (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2674,12 +2419,16 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6704331756686872300, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
+      propertyPath: speed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6704331756686872300, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: playerPos
       value: 
-      objectReference: {fileID: 628620087}
+      objectReference: {fileID: 1580829170}
     - target: {fileID: 6704331756686872303, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 6704331756686872303, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2757,7 +2506,7 @@ GameObject:
   m_Component:
   - component: {fileID: 865916337}
   - component: {fileID: 865916338}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hallway (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2837,10 +2586,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3860916617024998168, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
+      propertyPath: m_Radius
+      value: 8.79
+      objectReference: {fileID: 0}
     - target: {fileID: 3860916617281668230, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: playerPos
       value: 
-      objectReference: {fileID: 628620087}
+      objectReference: {fileID: 1580829170}
     - target: {fileID: 3860916617528585864, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: m_LinearDrag
       value: 3
@@ -2854,12 +2607,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3860916617528585867, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
+      propertyPath: speed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860916617528585867, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: playerPos
       value: 
-      objectReference: {fileID: 628620087}
+      objectReference: {fileID: 1580829170}
     - target: {fileID: 3860916617528585868, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3860916617528585868, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2912,7 +2669,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 892085104}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HallwayA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2966,12 +2723,16 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6704331756686872300, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
+      propertyPath: speed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6704331756686872300, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: playerPos
       value: 
-      objectReference: {fileID: 628620087}
+      objectReference: {fileID: 1580829170}
     - target: {fileID: 6704331756686872303, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 6704331756686872303, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3039,7 +2800,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
---- !u!1 &937442848
+--- !u!1 &919898930
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3047,54 +2808,27 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 937442850}
-  - component: {fileID: 937442849}
-  m_Layer: 11
-  m_Name: InteractionCheck
-  m_TagString: InteractionCheck
+  - component: {fileID: 919898931}
+  m_Layer: 0
+  m_Name: '#-- ENEMIES -- #'
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &937442849
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937442848}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3, y: 3}
-  m_EdgeRadius: 0
---- !u!4 &937442850
+--- !u!4 &919898931
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937442848}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 919898930}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.2929577, y: 20.038477, z: -13.827862}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 628620087}
-  m_RootOrder: 1
+  m_Father: {fileID: 1580829170}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &950550628
 GameObject:
@@ -3106,7 +2840,7 @@ GameObject:
   m_Component:
   - component: {fileID: 950550629}
   - component: {fileID: 950550630}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hallway (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3195,12 +2929,16 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6704331756686872300, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
+      propertyPath: speed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6704331756686872300, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: playerPos
       value: 
-      objectReference: {fileID: 628620087}
+      objectReference: {fileID: 1580829170}
     - target: {fileID: 6704331756686872303, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 6704331756686872303, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3278,7 +3016,7 @@ GameObject:
   m_Component:
   - component: {fileID: 990838918}
   - component: {fileID: 990838919}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hallway (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3361,7 +3099,7 @@ GameObject:
   m_Component:
   - component: {fileID: 993101788}
   - component: {fileID: 993101789}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RoomB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3444,7 +3182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1002671464}
   - component: {fileID: 1002671465}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Room (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3527,7 +3265,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1052634637}
   - component: {fileID: 1052634638}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hallway
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3610,7 +3348,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1059408548}
   - component: {fileID: 1059408549}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hallway (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3693,7 +3431,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1094717520}
   - component: {fileID: 1094717521}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Room (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3791,7 +3529,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1140901432}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.513224, y: -2.6763325, z: 1.1367502}
+  m_LocalPosition: {x: -3.2132242, y: -5.7056427, z: 1.1367502}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 732582541}
@@ -3817,7 +3555,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 628620087}
+  m_Follow: {fileID: 1580829170}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 18
@@ -3827,7 +3565,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -3846,7 +3584,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1162772336}
   - component: {fileID: 1162772337}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hallway (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3929,7 +3667,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1225267892}
   - component: {fileID: 1225267893}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hallway (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4012,7 +3750,7 @@ PrefabInstance:
     - target: {fileID: 3860916617281668230, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: playerPos
       value: 
-      objectReference: {fileID: 628620087}
+      objectReference: {fileID: 1580829170}
     - target: {fileID: 3860916617528585864, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: m_LinearDrag
       value: 3
@@ -4026,12 +3764,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3860916617528585867, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
+      propertyPath: speed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860916617528585867, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: playerPos
       value: 
-      objectReference: {fileID: 628620087}
+      objectReference: {fileID: 1580829170}
     - target: {fileID: 3860916617528585868, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3860916617528585868, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4085,7 +3827,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1281030240}
   - component: {fileID: 1281030241}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hallway (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4168,7 +3910,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1294145811}
   - component: {fileID: 1294145812}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hallway (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4251,7 +3993,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1309213590}
   - component: {fileID: 1309213591}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HallwayB (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4324,6 +4066,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1342932546
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1342932548}
+  - component: {fileID: 1342932547}
+  m_Layer: 11
+  m_Name: InteractionCheck
+  m_TagString: InteractionCheck
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1342932547
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342932546}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3, y: 3}
+  m_EdgeRadius: 0
+--- !u!4 &1342932548
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342932546}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1580829170}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1348945363
 GameObject:
   m_ObjectHideFlags: 0
@@ -4334,7 +4133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1348945364}
   - component: {fileID: 1348945365}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HallwayB (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4417,7 +4216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1365683542}
   - component: {fileID: 1365683543}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HallwayB (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4497,10 +4296,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3860916617024998168, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
+      propertyPath: m_Radius
+      value: 8.79
+      objectReference: {fileID: 0}
     - target: {fileID: 3860916617281668230, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: playerPos
       value: 
-      objectReference: {fileID: 628620087}
+      objectReference: {fileID: 1580829170}
     - target: {fileID: 3860916617528585864, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: m_LinearDrag
       value: 3
@@ -4514,12 +4317,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3860916617528585867, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
+      propertyPath: speed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860916617528585867, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: playerPos
       value: 
-      objectReference: {fileID: 628620087}
+      objectReference: {fileID: 1580829170}
     - target: {fileID: 3860916617528585868, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3860916617528585868, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4573,7 +4380,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1458062945}
   - component: {fileID: 1458062946}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Room (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4656,7 +4463,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1464421683}
   - component: {fileID: 1464421684}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HallwayB (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4739,7 +4546,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1472443709}
   - component: {fileID: 1472443710}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Room (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4828,12 +4635,16 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6704331756686872300, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
+      propertyPath: speed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6704331756686872300, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: playerPos
       value: 
-      objectReference: {fileID: 628620087}
+      objectReference: {fileID: 1580829170}
     - target: {fileID: 6704331756686872303, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 6704331756686872303, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4911,7 +4722,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1498084954}
   - component: {fileID: 1498084955}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hallway (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5000,12 +4811,16 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6704331756686872300, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
+      propertyPath: speed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6704331756686872300, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: playerPos
       value: 
-      objectReference: {fileID: 628620087}
+      objectReference: {fileID: 1580829170}
     - target: {fileID: 6704331756686872303, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6704331756686872303, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5083,7 +4898,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1553010156}
   - component: {fileID: 1553010157}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Room (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5156,6 +4971,294 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1580829162
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1580829170}
+  - component: {fileID: 1580829169}
+  - component: {fileID: 1580829168}
+  - component: {fileID: 1580829167}
+  - component: {fileID: 1580829166}
+  - component: {fileID: 1580829165}
+  - component: {fileID: 1580829164}
+  - component: {fileID: 1580829163}
+  m_Layer: 3
+  m_Name: Player
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &1580829163
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580829162}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 263524b2a9f09944281ddc96a5d74d1a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1580829164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580829162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 0040e31b95278884ba66ac7b39571392, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1580829166}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: ReadInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c3db0bb2-229a-4c83-9251-1f716ba3d205
+    m_ActionName: Land/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1742426199}
+        m_TargetAssemblyTypeName: PlayerCombat, Assembly-CSharp
+        m_MethodName: Shoot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 96f3587b-c7ff-4197-ae71-d437814740f9
+    m_ActionName: Land/Shoot[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e77e0b20-8c4a-43bf-af4a-760f8a247962
+    m_ActionName: Land/MousePosition[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1580829166}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: Interact
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: e5061b45-d468-411f-a193-084f7dcc63e0
+    m_ActionName: Land/Interact[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1742426199}
+        m_TargetAssemblyTypeName: PlayerCombat, Assembly-CSharp
+        m_MethodName: Melee
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 7c092734-e7da-4e5e-b00c-3efeacca0f57
+    m_ActionName: Land/Attack[/Keyboard/space]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Land
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &1580829165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580829162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b779e2e999b73ba46a4eadd4a14b03dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  rb: {fileID: 1580829167}
+  health: 10
+  invincibilityLifetime: 3
+  knockbackForce: 2
+--- !u!114 &1580829166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580829162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99e959380b3b91946a7edabaf56d6b8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1580829167}
+  interactionTrigger: {fileID: 1342932547}
+  speed: 20
+--- !u!50 &1580829167
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580829162}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.1
+  m_LinearDrag: 10
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!70 &1580829168
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580829162}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.07, y: -0.4}
+  m_Size: {x: 1.3, y: 5.89}
+  m_Direction: 0
+--- !u!212 &1580829169
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580829162}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -2092026681
+  m_SortingLayer: 1
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: d3670d9d4cbcfeb40b240438cb6171b4, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1580829170
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580829162}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1, y: -1.1293104, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1742426200}
+  - {fileID: 1342932548}
+  - {fileID: 919898931}
+  m_Father: {fileID: 0}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1620835030
 GameObject:
   m_ObjectHideFlags: 0
@@ -5166,7 +5269,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1620835031}
   - component: {fileID: 1620835032}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hallway (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5239,6 +5342,75 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1692849121
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1580829170}
+    m_Modifications:
+    - target: {fileID: 5067696661739425812, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1580829163}
+    - target: {fileID: 5067696661739425813, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d71150416fbba2b498cd63c757316748, type: 3}
+    - target: {fileID: 5067696661739425818, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5067696661739425818, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5067696661739425818, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5067696661739425818, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5067696661739425818, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5067696661739425818, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5067696661739425818, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5067696661739425818, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5067696661739425818, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5067696661739425818, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5067696661739425818, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5067696661739425819, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
+      propertyPath: m_Name
+      value: Shotgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 5067696661739425819, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
 --- !u!1 &1707260884
 GameObject:
   m_ObjectHideFlags: 0
@@ -5249,7 +5421,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1707260885}
   - component: {fileID: 1707260886}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hallway (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5322,6 +5494,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1742426199 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5067696661739425812, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
+  m_PrefabInstance: {fileID: 1692849121}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5555eb196687db43a507c6c06e6af11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1742426200 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5067696661739425818, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
+  m_PrefabInstance: {fileID: 1692849121}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1813041518
 GameObject:
   m_ObjectHideFlags: 0
@@ -5332,7 +5520,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1813041519}
   - component: {fileID: 1813041520}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Room (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5421,12 +5609,16 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6704331756686872300, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
+      propertyPath: speed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6704331756686872300, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: playerPos
       value: 
-      objectReference: {fileID: 628620087}
+      objectReference: {fileID: 1580829170}
     - target: {fileID: 6704331756686872303, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 6704331756686872303, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5504,7 +5696,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1831837427}
   - component: {fileID: 1831837428}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Room (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5584,10 +5776,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3860916617024998168, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
+      propertyPath: m_Radius
+      value: 8.79
+      objectReference: {fileID: 0}
     - target: {fileID: 3860916617281668230, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: playerPos
       value: 
-      objectReference: {fileID: 628620087}
+      objectReference: {fileID: 1580829170}
     - target: {fileID: 3860916617528585864, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: m_LinearDrag
       value: 3
@@ -5601,12 +5797,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3860916617528585867, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
+      propertyPath: speed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860916617528585867, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: playerPos
       value: 
-      objectReference: {fileID: 628620087}
+      objectReference: {fileID: 1580829170}
     - target: {fileID: 3860916617528585868, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3860916617528585868, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5657,10 +5857,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3860916617024998168, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
+      propertyPath: m_Radius
+      value: 8.79
+      objectReference: {fileID: 0}
     - target: {fileID: 3860916617281668230, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: playerPos
       value: 
-      objectReference: {fileID: 628620087}
+      objectReference: {fileID: 1580829170}
     - target: {fileID: 3860916617528585864, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: m_LinearDrag
       value: 3
@@ -5674,12 +5878,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3860916617528585867, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
+      propertyPath: speed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860916617528585867, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: playerPos
       value: 
-      objectReference: {fileID: 628620087}
+      objectReference: {fileID: 1580829170}
     - target: {fileID: 3860916617528585868, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3860916617528585868, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5730,10 +5938,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3860916617024998168, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
+      propertyPath: m_Radius
+      value: 8.79
+      objectReference: {fileID: 0}
     - target: {fileID: 3860916617281668230, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: playerPos
       value: 
-      objectReference: {fileID: 628620087}
+      objectReference: {fileID: 1580829170}
     - target: {fileID: 3860916617528585864, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: m_LinearDrag
       value: 3
@@ -5747,12 +5959,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3860916617528585867, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
+      propertyPath: speed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860916617528585867, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: playerPos
       value: 
-      objectReference: {fileID: 628620087}
+      objectReference: {fileID: 1580829170}
     - target: {fileID: 3860916617528585868, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3860916617528585868, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5806,7 +6022,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1898681353}
   - component: {fileID: 1898681354}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HallwayB (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5895,12 +6111,16 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6704331756686872300, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
+      propertyPath: speed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6704331756686872300, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: playerPos
       value: 
-      objectReference: {fileID: 628620087}
+      objectReference: {fileID: 1580829170}
     - target: {fileID: 6704331756686872303, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 6704331756686872303, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5985,7 +6205,7 @@ GameObject:
   - component: {fileID: 1930298240}
   - component: {fileID: 1930298239}
   - component: {fileID: 1930298244}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MapLayout
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6009,7 +6229,7 @@ Transform:
   - {fileID: 328926706}
   - {fileID: 645088882}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1930298237
 PolygonCollider2D:
@@ -6411,7 +6631,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1932662696}
   - component: {fileID: 1932662697}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hallway (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6491,10 +6711,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3860916617024998168, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
+      propertyPath: m_Radius
+      value: 8.79
+      objectReference: {fileID: 0}
     - target: {fileID: 3860916617281668230, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: playerPos
       value: 
-      objectReference: {fileID: 628620087}
+      objectReference: {fileID: 1580829170}
     - target: {fileID: 3860916617528585864, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: m_LinearDrag
       value: 3
@@ -6508,12 +6732,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3860916617528585867, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
+      propertyPath: speed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860916617528585867, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: playerPos
       value: 
-      objectReference: {fileID: 628620087}
+      objectReference: {fileID: 1580829170}
     - target: {fileID: 3860916617528585868, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3860916617528585868, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6650,7 +6878,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1962711230}
   - component: {fileID: 1962711231}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HallwayB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6723,87 +6951,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &1972433658
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 628620087}
-    m_Modifications:
-    - target: {fileID: 5067696661739425813, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: d71150416fbba2b498cd63c757316748, type: 3}
-    - target: {fileID: 5067696661739425818, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5067696661739425818, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5067696661739425818, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5067696661739425818, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5067696661739425818, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5067696661739425818, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5067696661739425818, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5067696661739425818, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5067696661739425818, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5067696661739425818, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5067696661739425818, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5067696661739425819, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
-      propertyPath: m_Name
-      value: Shotgun
-      objectReference: {fileID: 0}
-    - target: {fileID: 5067696661739425819, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
-      propertyPath: m_TagString
-      value: Weapon
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
---- !u!114 &1972433659 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5067696661739425812, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
-  m_PrefabInstance: {fileID: 1972433658}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5555eb196687db43a507c6c06e6af11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1972433660 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5067696661739425818, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
-  m_PrefabInstance: {fileID: 1972433658}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1974023525
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6820,12 +6967,16 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6704331756686872300, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
+      propertyPath: speed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6704331756686872300, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: playerPos
       value: 
-      objectReference: {fileID: 628620087}
+      objectReference: {fileID: 1580829170}
     - target: {fileID: 6704331756686872303, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: m_RootOrder
-      value: 24
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 6704331756686872303, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6900,10 +7051,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3860916617024998168, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
+      propertyPath: m_Radius
+      value: 8.79
+      objectReference: {fileID: 0}
     - target: {fileID: 3860916617281668230, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: playerPos
       value: 
-      objectReference: {fileID: 628620087}
+      objectReference: {fileID: 1580829170}
     - target: {fileID: 3860916617528585864, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: m_LinearDrag
       value: 3
@@ -6917,12 +7072,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3860916617528585867, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
+      propertyPath: speed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860916617528585867, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: playerPos
       value: 
-      objectReference: {fileID: 628620087}
+      objectReference: {fileID: 1580829170}
     - target: {fileID: 3860916617528585868, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3860916617528585868, guid: e8ae3b89b15f67b4a97beb91817fce0a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6982,12 +7141,16 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6704331756686872300, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
+      propertyPath: speed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6704331756686872300, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: playerPos
       value: 
-      objectReference: {fileID: 628620087}
+      objectReference: {fileID: 1580829170}
     - target: {fileID: 6704331756686872303, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 6704331756686872303, guid: 36847334b5fc3554ab594db4529bdd11, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7065,7 +7228,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2054250089}
   - component: {fileID: 2054250090}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HallwayB (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7148,7 +7311,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2068485233}
   - component: {fileID: 2068485234}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HallwayB (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

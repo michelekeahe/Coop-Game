@@ -15,6 +15,7 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private PlayerBullet bulletPrefab;
     [SerializeField] private Transform firePoint;
     [SerializeField] private BoxCollider2D meleePoint;
+    [SerializeField] private Animator animator;
     private Camera mainCam;
     #endregion
 
@@ -23,6 +24,7 @@ public class PlayerCombat : MonoBehaviour
     public int maxAmmo = 50;
     private float angle = 0f;
     public float aimSpeed = 0;
+    private Vector3 targetDirection;
     #endregion
 
     private void Awake()
@@ -39,6 +41,7 @@ public class PlayerCombat : MonoBehaviour
     private void FixedUpdate()
     {
         FollowMouse();
+        Animate();
     }
 
     // ======================
@@ -62,9 +65,9 @@ public class PlayerCombat : MonoBehaviour
     {
         Vector2 mouseScreenPosition = controls.Land.MousePosition.ReadValue<Vector2>();
         Vector3 mouseWorldPosition = mainCam.ScreenToWorldPoint(mouseScreenPosition);
-        Vector3 targetDirection = mouseWorldPosition - transform.position;
+        targetDirection = mouseWorldPosition - transform.position;
         angle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
-        
+
         transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
     }
 
@@ -98,5 +101,11 @@ public class PlayerCombat : MonoBehaviour
     {
         controls.Disable();
     } 
+
+    private void Animate()
+    {
+        animator.SetFloat("Horizontal", targetDirection.x);
+        animator.SetFloat("Vertical", targetDirection.y);
+    }
     
 }
