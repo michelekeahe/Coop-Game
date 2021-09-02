@@ -67,9 +67,6 @@ public class PlayerCombat : MonoBehaviour
         Vector3 mouseWorldPosition = mainCam.ScreenToWorldPoint(mouseScreenPosition);
         targetDirection = mouseWorldPosition - transform.position;
         angle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
-        Debug.Log("Screen position: " + targetDirection);
-
-
 
         transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
     }
