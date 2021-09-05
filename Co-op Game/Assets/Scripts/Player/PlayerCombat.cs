@@ -12,6 +12,7 @@ public class PlayerCombat : MonoBehaviour
     #endregion
 
     #region Declaring component
+    [SerializeField] private Fov fov;
     [SerializeField] private PlayerBullet bulletPrefab;
     [SerializeField] private Transform firePoint;
     [SerializeField] private BoxCollider2D meleePoint;
@@ -67,6 +68,11 @@ public class PlayerCombat : MonoBehaviour
         Vector3 mouseWorldPosition = mainCam.ScreenToWorldPoint(mouseScreenPosition);
         targetDirection = mouseWorldPosition - transform.position;
         angle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
+
+        // Sends targetDirection and position to the Fov script
+        fov.SetAimDir(targetDirection);
+        fov.SetOrigin(transform.position);
+
 
         transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
     }

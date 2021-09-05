@@ -4,21 +4,34 @@ using UnityEngine;
 
 public class Fov : MonoBehaviour
 {
-    public float viewDistance = 0f;
+    #region Components
+    private Mesh mesh;
+    [SerializeField] private LayerMask layerMask;
+    #endregion
 
+    #region SerializedFeild
+    [SerializeField] private float viewDistance = 0f;
+    [SerializeField] private float fov = 90f;
+    [SerializeField] private int raycount = 10;
+    #endregion
 
-    void Update()
+    #region Private Var
+    private float startingAngle;
+    private Vector3 origin;
+    #endregion
+
+    private void Start()
     {
-
-        Mesh mesh = new Mesh();
+        mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
+        origin = Vector3.zero;
+    }
 
-
-        float fov = 90f;
-        int raycount = 10;
-        float angle = 0f;
+    //Draws the FOV mesh according to rays
+    private void LateUpdate()
+    {
+        float angle = startingAngle;
         float angleIncreae = fov / raycount;
-        Vector3 origin = Vector3.zero;
 
         Vector3[] vertices = new Vector3[raycount + 1 + 1];
         Vector2[] uv = new Vector2[vertices.Length];
@@ -33,7 +46,7 @@ public class Fov : MonoBehaviour
         {
             Vector3 vertex;
 
-            RaycastHit2D hit = Physics2D.Raycast(origin, AngleToVector(angle),  viewDistance);
+            RaycastHit2D hit = Physics2D.Raycast(origin, AngleToVector(angle),  viewDistance, layerMask);
             Debug.DrawRay(origin, AngleToVector(angle) * viewDistance, Color.red);
 
             if (hit.collider == null)
@@ -68,11 +81,32 @@ public class Fov : MonoBehaviour
 
     }
 
-
-
+    // Fancy method to turn a float to a vector
    private Vector3 AngleToVector(float angle)
     {
         float angleRad = angle * (Mathf.PI / 180);
         return new Vector3(Mathf.Cos(angleRad), Mathf.Sin(angleRad));
+    }
+
+    // PlayerCombat script sends origin point (that is, the gun) to this script
+    public void SetOrigin(Vector3 origin)
+    {
+        this.origin = origin;
+    }
+
+    // PlayerCombat script sends mouse direction to this script
+    public void SetAimDir(Vector3 aimDirection)
+    {
+        startingAngle = GetAngleFromVectorFloat(aimDirection) + fov / 2;
+    }
+
+    // Fancy method to turn vector to a float
+    public float GetAngleFromVectorFloat(Vector3 dir)
+    {
+        dir = dir.normalized;
+        float n = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        if (n < 0) n += 360;
+
+        return n;
     }
 }

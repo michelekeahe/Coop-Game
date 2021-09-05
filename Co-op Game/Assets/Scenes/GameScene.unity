@@ -9322,7 +9322,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b08669a2c7ca7418c491232ec18fa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewDistance: 10
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  viewDistance: 15
+  fov: 90
+  raycount: 20
 --- !u!1 &1073068940
 GameObject:
   m_ObjectHideFlags: 0
@@ -10946,6 +10951,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 354554480}
     m_Modifications:
+    - target: {fileID: 5067696661739425812, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
+      propertyPath: fov
+      value: 
+      objectReference: {fileID: 1016405260}
     - target: {fileID: 5067696661739425812, guid: bcb6a7d6a25b6a84bbeced809ee97ebb, type: 3}
       propertyPath: animator
       value: 
