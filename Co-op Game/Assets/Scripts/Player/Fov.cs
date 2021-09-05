@@ -30,6 +30,7 @@ public class Fov : MonoBehaviour
     //Draws the FOV mesh according to rays
     private void LateUpdate()
     {
+        mesh.RecalculateBounds();
         float angle = startingAngle;
         float angleIncreae = fov / raycount;
 
